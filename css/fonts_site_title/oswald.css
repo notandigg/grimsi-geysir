@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+.navbar-brand {
+    font-family: 'Oswald', sans-serif;
+    -webkit-transition: padding .2s ease-in;
+    -moz-transition: padding .2s ease-in;
+    transition: padding .2s ease-in;
+}

@@ -1,0 +1,24 @@
+<koken:include file="layout/header.html" />
+<koken:include file="layout/nav.html" />
+<div id="top" class="bg-alt">
+  <div class="container-fluid">
+
+  <koken:if true="settings.show_header">
+  <div class="col-lg-12 text-xs-center">
+    <h2 class="text-primary">{{ labels.essay.plural }}
+    <koken:if true="{{ settings.show_essays_filter }}">
+    <koken:include file="layout/date_filter_essays.html" />
+    </koken:if>
+    </h2>
+    <hr class="primary hidden-sm-up">
+  </div>
+  </koken:if>
+
+  <koken:load limit="{{ settings.essay_count }}" infinite="true">
+<koken:include file="layout/grid/essay-grid.html" />
+  </koken:load>
+  </div>
+  </div>
+<koken:include file="layout/loading.html" />
+</div>
+<koken:include file="layout/footer.html" />

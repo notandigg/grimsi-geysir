@@ -1,0 +1,117 @@
+<style type="text/css">
+    .section-fill-height.slideshow-container h2 {
+        color: #fff;
+        text-shadow: 1px 1px #000;
+        display: table;
+        position: absolute;
+        top: 0;
+        margin: auto;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        width: 100%;
+        z-index: 999;
+        padding: 10px;
+    }
+
+    .section-fill-height.slideshow-container h2 .btn {
+        text-shadow: none;
+        background-color: rgba(204, 204, 204, 0.75);
+        border: none;
+        margin-top: 20px;
+    }
+</style>
+
+<koken:load>
+    <koken:include file="layout/header.html" />
+    <koken:include file="layout/nav.html" />
+<koken:if true="settings.show_slideshow">
+    <div class="section-fill-height slideshow-container animated bounceInDown" id="slideshow">
+        <div id="ss_spinner"></div>
+        <koken:pulse class="slideshow" jsvar="pulse" width="100%" height="100%" crop="fill" loop="true" autostart="true" random="true" source="{{ settings.slideshow_source }}" />
+        <koken:if true="settings.show_slideshow_overlay">
+            <h2 class="{{ settings.animation_type }}" data-wow-duration="2s" data-wow-delay="0.5s"><koken:if true="{{ settings.show_intro_text }}"><p style="font-size:24px;margin-bottom:5px;">{{ settings.intro_text }}</p></koken:if>
+    <koken:if true="settings.show_section_buttons">
+    <div class="btn-group hidden-sm-down" role="group" aria-label="Navigation">
+      <koken:if true="settings.content_front">
+        <a href="#{{ labels.content.plural }}" class="btn btn-secondary page-scroll {{ settings.animation_type_welcome }}" data-wow-duration="2s" data-wow-delay="0.5s" title="{{labels.content.plural}}" data-bind-to-key="right"> <i class="fa fa-photo fa-fw"></i> {{ labels.content.plural }} </a>
+      </koken:if>
+      <koken:if true="settings.album_front">
+        <a href="#{{ labels.album.plural }}" class="btn btn-secondary page-scroll {{ settings.animation_type_welcome }}" data-wow-duration="2s" data-wow-delay="0.5s"> <i class="fa fa-folder-o fa-fw"></i> {{ labels.album.plural }} </a>
+      </koken:if>
+      <koken:if true="settings.essay_front">
+        <a href="#{{ labels.essay.plural }}" class="btn btn-secondary page-scroll" title="{{labels.essay.plural}}"> <i class="fa fa-pencil fa-fw"></i> {{ labels.essay.plural }} </a>
+      </koken:if>
+    </div>
+    </koken:if>
+  </h2>
+        </koken:if>
+    </div>
+</koken:if>
+
+    <!-- Content Section -->
+    <koken:if true="settings.content_front">
+        <section id="{{ labels.content.plural }}" class="bg-faded">
+            <div class="wow {{ settings.animation_type }}">
+                <div class="col-lg-12 text-xs-center">
+                    <h2 class="m-t-0 text-primary">{{ labels.content.plural }}</h2>
+                    <hr class="primary hidden-sm-up">
+                </div>
+                <koken:load source="contents" limit="{{ settings.content_front_count }}">
+                    <koken:include file="layout/grid/photo-grid.html" />
+                </koken:load>
+            </div>
+            <center>
+                <koken:link to="contents">
+                    <div class="btn btn-secondary m-y-1">More {{ labels.content.plural }} </div>
+                </koken:link>
+            </center>
+        </section>
+    </koken:if>
+    <!-- Content Section -->
+
+    <!-- Album Section -->
+    <koken:if true="settings.album_front">
+        <section id="{{ labels.album.plural }}" class="bg-alt">
+            <div class="container wow {{ settings.animation_type }}">
+                <div class="col-lg-12 text-xs-center">
+                    <h2 class="m-t-0 text-primary">{{ labels.album.plural }}</h2>
+                    <hr class="primary hidden-sm-up">
+                </div>
+                <koken:load source="albums" limit="{{ settings.album_front_count }}" order_by="modified_on" order_direction="desc">
+                    <koken:include file="layout/grid/album-grid.html" />
+                </koken:load>
+            </div>
+            <center>
+                <koken:link to="albums">
+                    <div class="btn btn-secondary m-y-1">More {{ labels.album.plural }} </div>
+                </koken:link>
+            </center>
+        </section>
+    </koken:if>
+    <!-- Album Section -->
+
+    <!-- Essay Section -->
+    <koken:if true="settings.essay_front">
+        <section id="{{ labels.essay.plural }}" class="bg-faded">
+            <div class="container-fluid wow {{ settings.animation_type }}">
+                <div class="col-lg-12 text-xs-center">
+                    <h2 class="m-t-0 text-primary">{{ labels.essay.plural }}</h2>
+                    <hr class="primary hidden-sm-up">
+                </div>
+                <koken:load source="essays" limit="{{ settings.essay_front_count }}">
+                    <koken:include file="layout/grid/essay-grid.html" />
+                </koken:load>
+            </div>
+            <center>
+                <koken:link to="essays">
+                    <div class="btn btn-secondary m-y-1">More {{ labels.essay.plural }} </div>
+                </koken:link>
+            </center>
+        </section>
+    </koken:if>
+    <!-- Essay Section -->
+
+    <koken:include file="layout/footer.html" />
+</koken:load>

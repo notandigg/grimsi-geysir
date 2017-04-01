@@ -1,0 +1,25 @@
+<nav id="topNav" class="navbar navbar-default navbar-fixed-top bg-nav">
+    <div class="container-fixed">
+        <button type="button" class="btn bg-no navbar-toggle collapsed pull-right m-y-0" data-toggle="modal" data-target="#menuModal"> <i class="fa fa-bars fa-2x"></i> </button>
+
+        <koken:if true="settings.show_search">
+            <span class="pull-right hidden-sm-down" id="search-input">
+              <koken:include file="inc/search/leitarvel.php" />
+            </span>
+      </koken:if>
+
+      <!-- LOGO -->
+      <koken:if data="settings.site_title_type" equals="image">
+          <koken:link to="front" class="navbar-brand nav-item page-scroll hidden-sm-down"><img src="{{ location.theme_path }}/img/logo_cursive.png" style="position:absolute; top:0; left:0;" /></koken:link>
+          <koken:else>
+              <koken:link to="front" class="navbar-brand nav-item page-scroll text-muted">
+                  <div class="site-title-position" style="text-transform:normal;">{{ settings.site_title }}</div>
+              </koken:link>
+      </koken:if>
+      <!-- //LOGO -->
+
+</nav>
+
+<koken:include file="layout/nav-overlay.html" />
+</head>
+<body>

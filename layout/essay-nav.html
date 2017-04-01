@@ -1,0 +1,15 @@
+<div class="btn-group">
+<koken:previous>
+  <koken:link class="btn btn-secondary" bind_to_key="left" id="nav-back" title="{{ essay.title }}">
+  <i class="fa fa-angle-left"></i> <span class="hidden-sm-down">{{ essay.title truncate="25" }}</span>
+</koken:link>
+</koken:previous>
+<koken:link class="btn btn-secondary" to="essays" id="nav-return" title="Back to {{ labels.essay.plural }}">
+  <i class="fa fa-th-list"></i>
+</koken:link>
+<koken:next>
+  <koken:link class="btn btn-secondary" bind_to_key="right" id="nav-forward" title="{{ essay.title }}">
+  <span class="hidden-sm-down">{{ essay.title truncate="25" }}</span> <i class="fa fa-angle-right"></i>
+</koken:next>
+</koken:link>
+</div>

@@ -1,0 +1,35 @@
+<!-- TAGS -->
+<div class="col-xs-12 col-sm-4 text-xs-center">
+    <h6 class="text-uppercase text-primary">{{ labels.tag.plural }}</h6>
+    <hr class="primary" />
+    <koken:load source="tags" limit="5">
+        <koken:loop separator="<br>">
+            <koken:link class="text-left"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
+        </koken:loop>
+    </koken:load>
+</div>
+<!-- //TAGS -->
+
+<!-- CATEGORIES -->
+<div class="col-xs-12 col-sm-4 text-xs-center">
+    <h6 class="text-uppercase text-primary">{{ labels.category.plural }}</h6>
+    <hr class="primary" />
+    <koken:load source="categories" limit="5">
+        <koken:loop separator="<br>">
+            <koken:link class="text-left"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
+        </koken:loop>
+    </koken:load>
+</div>
+<!-- //CATEGORIES -->
+
+<!-- Recent essays -->
+<div class="col-xs-12 col-sm-4 text-xs-center">
+    <h6 class="text-uppercase text-primary">Recent {{ labels.essay.plural }}</h6>
+    <hr class="primary" />
+    <koken:load source="essays" limit="5">
+        <koken:loop separator="<br><br>">
+            <koken:link class="text-left">{{ essay.title truncate="30" }}</koken:link><br><span class="pull-right bg-primary" style="padding:3px; font-size:12px;"><koken:time relative="true" /></span>
+        </koken:loop>
+    </koken:load>
+</div>
+<!-- //Recent essays -->

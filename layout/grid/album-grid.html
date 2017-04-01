@@ -1,0 +1,14 @@
+<div class="row">
+    <koken:loop>
+        <koken:link>
+            <div class="col-xs-{{ settings_columns_sm_album }} col-md-{{ settings.columns_md_album }}">
+                <div class="card">
+                    <koken:img size="3:2" lazy="true" fade="true" />
+                    <div class="card-header">
+                        <span class="card-title">{{ album.title }}</span>
+                    </div>
+                </div>
+            </div>
+        </koken:link>
+    </koken:loop>
+</div>

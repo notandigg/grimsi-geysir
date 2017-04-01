@@ -1,0 +1,91 @@
+<koken:if true="settings.show_breadcrumbs">
+<!-- If Tag -->
+<koken:if data="location.template" equals="tag">
+<p>
+<div class="btn-group">
+  <koken:link to="tags" class="btn btn-sm btn-secondary"><i class="fa fa-angle-left"></i> {{ labels.tag.plural }}</koken:link>
+  <span class="btn btn-sm btn-secondary">{{ tag.title }}</span>
+</div>
+</p>
+</koken:if>
+<!-- If Tag -->
+<!-- If Category -->
+<koken:if data="location.template" equals="category">
+<p>
+<div class="btn-group">
+  <koken:link to="categories" class="btn btn-sm btn-secondary"><i class="fa fa-angle-left"></i> {{ labels.category.plural }}</koken:link>
+  <span class="btn btn-sm btn-secondary">{{ category.title }}</span>
+</div>
+</p>
+</koken:if>
+<!-- If Category -->
+
+<!-- If Desktop -->
+<!-- If Album -->
+<koken:if data="location.template" equals="album">
+  <div class="btn-group hidden-sm-down">
+    <koken:link to="albums" class="btn btn-sm btn-secondary">{{ labels.album.plural }}</koken:link>
+    <a class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </a>
+    <div class="dropdown-menu">
+     <h6 class="dropdown-header"> {{ labels.album.plural }} & {{ labels.set.plural }} </h6>
+      <koken:albums>
+        <koken:loop>
+          <koken:link class="dropdown-item">{{ album.title }}</koken:link>
+        </koken:loop>
+     </koken:albums>
+    </div>
+  </div>
+  <koken:parent>
+    <div class="btn-group hidden-sm-down">
+      <koken:link class="btn btn-sm btn-secondary">{{ album.title }}</koken:link>
+      <a class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </a>
+      <div class="dropdown-menu">
+       <h6 class="dropdown-header">More from {{ album.title }}</h6>
+        <koken:loop>
+          <koken:link class="dropdown-item">{{ album.title }}</koken:link>
+        </koken:loop>
+      </div>
+    </div>
+  </koken:parent>
+</koken:if>
+<!-- If Album -->
+
+<!-- If Set -->
+<koken:if data="location.template" equals="set">
+  <div class="btn-group hidden-sm-down">
+    <koken:link to="albums" class="btn btn-sm btn-secondary">{{ labels.album.plural }}</koken:link>
+    <a class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </a>
+    <div class="dropdown-menu">
+<h6 class="dropdown-header"> {{ labels.album.plural }} & {{ labels.set.plural }} </h6>
+      <koken:albums>
+        <koken:loop>
+          <koken:link class="dropdown-item">{{ album.title }}</koken:link>
+        </koken:loop>
+      </koken:albums>
+    </div>
+  </div>
+</koken:if>
+<!-- If Set -->
+<!-- If Desktop -->
+
+<!-- If mobile -->
+<!-- If Album -->
+<koken:if data="location.template" equals="album">
+  <div class="btn-group hidden-sm-up">
+    <koken:link to="albums" class="btn btn-sm btn-secondary"><i class="fa fa-angle-left"></i> {{ labels.album.plural }}</koken:link>
+<koken:parent>
+    <koken:link class="btn btn-sm btn-secondary"><i class="fa fa-angle-left"></i> {{ album.title }}</koken:link>
+</koken:parent>
+</div>
+</koken:if>
+<!-- If Album -->
+
+<!-- If Set -->
+<koken:if data="location.template" equals="set">
+  <div class="btn-group hidden-sm-up">
+    <koken:link to="albums" class="btn btn-sm btn-secondary"><i class="fa fa-angle-left"></i> {{ labels.album.plural }}</koken:link>
+  </div>
+</koken:if>
+<!-- If Set -->
+<!-- If Mobile -->
+</koken:if>
