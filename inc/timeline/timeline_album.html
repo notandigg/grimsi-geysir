@@ -1,0 +1,31 @@
+<koken:event_album>
+    <div class="col-xs-{{ settings.columns_sm }} col-sm-{{ settings.columns_sm }} col-md-{{ settings.columns_sm }} col-lg-{{ settings.columns_md }} col-xl-{{ settings.columns_md }}">
+        <div class="card">
+            <koken:link to="albums"><i class="fa fa-folder-o timeline_album_icon" aria-hidden="true" title="{{ labels.album.singular }}"></i> </koken:link>
+            <span class="hidden-sm-down timeline_time"> <i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
+            <koken:if data="album.album_type" equals="standard">
+                <koken:link title="View {{ album.title }}">
+                    <koken:img size="3:2" crop="true" class="timeline-photo" lazy="true" fade="true" />
+                </koken:link>
+            </koken:if>
+            <!-- If a set, display each cover assigned to it plus a link to set.lens to view -->
+            <koken:if data="album.album_type" equals="set">
+                <koken:link title="View {{ album.title }}">
+                    <koken:covers limit="5">
+                        <koken:first>
+                            <koken:img class="timeline-photo" lazy="true" fade="true" />
+                        </koken:first>
+                    </koken:covers>
+                </koken:link>
+            </koken:if>
+            <koken:link>
+                <div class="card-header">
+                    <span class="card-title">{{ album.title }}</span>
+                    <div class="hidden-sm-up"> <i class="fa fa-clock-o"></i>
+                        <koken:time relative="true" />
+                    </div>
+                </div>
+            </koken:link>
+        </div>
+    </div>
+</koken:event_album>

@@ -1,5 +1,5 @@
-<koken:include file="layout/header.html" />
-<koken:include file="layout/nav.html" />
+<koken:include file="inc/header.html" />
+<koken:include file="inc/nav.html" />
 <koken:load limit="200">
 <div id="top" class="bg-alt">
   <div class="container">
@@ -21,4 +21,4 @@
   </div>
 </div>
 </koken:load>
-<koken:include file="layout/footer.html" />
+<koken:include file="inc/footer.html" />

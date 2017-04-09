@@ -1,21 +1,23 @@
-<koken:include file="layout/header.html" />
-<koken:include file="layout/nav.html" />
+<koken:include file="inc/header.html" />
+<koken:include file="inc/nav.html" />
 <koken:load limit="30" infinite="true">
-<div id="top" class="bg-alt">
-  <div class="container-fluid fadeIn">
-  <div class="col-lg-12 text-xs-center">
+    <div id="top" class="bg-alt">
+        <div class="container-fluid fadeIn">
+            <div class="col-lg-12 text-xs-center">
 
-  <koken:if true="settings.show_header">
-    <h2 class="m-t-0 text-primary">{{ labels.category.singular }}: {{ category.title }}<span><sup>{{ category.counts.total }}</sup></span></h2>
-    <hr class="primary hidden-sm-up">
-    </koken:if>
+                <koken:if true="settings.show_header">
+                    <h2 class="m-t-0 text-primary">{{ labels.category.singular }}: {{ category.title }}<span><sup>{{ category.counts.total }}</sup></span></h2>
+                    <hr class="primary hidden-sm-up">
+                </koken:if>
 
-    <div><koken:include file="layout/breadcrumbs.html" /></div>
-  </div>
-<koken:include file="layout/events.php" />
-  </div>
-</div>
+                <div>
+                    <koken:include file="inc/breadcrumbs.html" />
+                </div>
+            </div>
+            <koken:include file="inc/events.php" />
+        </div>
+    </div>
 </koken:load>
-<koken:include file="layout/loading.html" />
+<koken:include file="inc/loading.html" />
 </div>
-<koken:include file="layout/footer.html" />
+<koken:include file="inc/footer.html" />

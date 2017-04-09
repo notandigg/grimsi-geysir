@@ -1,8 +1,9 @@
 <koken:load order_by="modified_on" order_direction="desc">
-<koken:include file="layout/header.html" />
-<koken:include file="layout/nav.html" />
+<koken:include file="inc/header.html" />
+<koken:include file="inc/nav.html" />
+<koken:load>
 <div id="top">
-  <div class="container">
+  <div class="container-fluid">
   <div class="col-lg-12 text-xs-center">
 
   <koken:if true="settings.show_header">
@@ -12,10 +13,11 @@
 
     <span class="text-muted">Published: <koken:time relative="true" /></span>
     <h6 class="text-dark">{{ album.description }}</h6>
-    <p><koken:include file="layout/breadcrumbs.html" /></p>
+    <p><koken:include file="inc/breadcrumbs.html" /></p>
   </div>
-<koken:include file="layout/grid/album-grid.html" />
+<koken:include file="inc/album/album-grid.html" />
 </div>
 </div>
-<koken:include file="layout/footer.html" />
+</koken:load>
+<koken:include file="inc/footer.html" />
 </koken:load>

@@ -1,22 +1,22 @@
-<koken:include file="layout/header.html" />
-<koken:include file="layout/nav.html" />
+<koken:include file="inc/header.html" />
+<koken:include file="inc/nav.html" />
 <div id="top" class="bg-alt">
-  <div class="container">
-    <div class="col-lg-12 text-xs-center m-y-2">
+    <div class="container">
+        <div class="col-lg-12 text-xs-center m-y-2">
 
-    <koken:if true="settings.show_header">
-      <h2 class="m-t-0 text-primary"> {{ labels.category.plural }} </h2>
-      <hr class="primary hidden-sm-up">
-      </koken:if>
-
-      <koken:categories>
-        <koken:loop>
-          <koken:link>
-            <span class="btn btn-xl btn-secondary" style="margin-bottom:2px;"><i class="fa fa-bookmark"></i> {{ category.title }} ({{ category.counts.total }})</span>
-          </koken:link>
-        </koken:loop>
-      </koken:categories>
-    </div
-  </div>
-</div>
-<koken:include file="layout/footer.html" />
+            <koken:if true="settings.show_header">
+                <h2 class="m-t-0 text-primary"> {{ labels.category.plural }} </h2>
+                <hr class="primary hidden-sm-up">
+            </koken:if>
+            <koken:load limit="30" infinite="true">
+                <koken:categories>
+                    <koken:loop>
+                        <koken:link>
+                            <span class="btn btn-xl btn-secondary" style="margin-bottom:2px;"><i class="fa fa-bookmark"></i> {{ category.title }} ({{ category.counts.total }})</span>
+                        </koken:link>
+                    </koken:loop>
+                </koken:categories>
+            </koken:load>
+        </div </div>
+    </div>
+    <koken:include file="inc/footer.html" />

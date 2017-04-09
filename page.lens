@@ -1,6 +1,6 @@
 <koken:load>
-  <koken:include file="layout/header.html" />
-  <koken:include file="layout/nav.html" />
+  <koken:include file="inc/header.html" />
+  <koken:include file="inc/nav.html" />
   <div id="top">
     <div class="container">
       <koken:if true="settings.show_header">
@@ -14,5 +14,5 @@
       </div>
     </div>
   </div>
-  <koken:include file="layout/footer.html" />
+  <koken:include file="inc/footer.html" />
 </koken:load>

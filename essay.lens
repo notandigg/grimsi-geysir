@@ -1,38 +1,35 @@
 <koken:load>
-<koken:include file="layout/header.html" />
-<koken:include file="layout/nav.html" />
-<div id="top">
-<div class="container">
+    <koken:include file="inc/header.html" />
+    <koken:include file="inc/nav.html" />
+    <div id="top">
+        <div class="container">
 
-<koken:if true="settings.show_header">
-  <div class="col-lg-12 text-xs-center">
-    <h2 class="text-primary">{{ essay.title }}</h2>
-    <hr class="primary hidden-sm-up">
-  </div>
-  </koken:if>
+            <koken:if true="settings.show_header">
+                <div class="col-lg-12 text-xs-center">
+                    <h2 class="text-primary">{{ essay.title }}</h2>
+                    <hr class="primary hidden-sm-up">
+                </div>
+            </koken:if>
 
-  <div class="col-lg-12 text-xs-center" style="margin-bottom:15px;">
-    <koken:include file="layout/essay-nav.html" />
-  </div>
-  <div class="col-md-8" style="margin-bottom:10px;">
-          <koken:featured_image>
-          <koken:link lightbox="true">
-            <koken:img class="timeline-photo img-rounded" lazy="true" fade="true" />
-            </koken:link>
-          </koken:featured_image>
-      <div>
-        <p>
-          {{ essay.content }}
-          </p>
-    </div>
-  </div>
-  <div class="col-md-4" style="margin-bottom:10px;">
-  <koken:include file="layout/sidebars/essay-sidebar.html" />
-  </div>
-</div>
-<div>
-<koken:if true="settings.show_disqus">
-<koken:include file="layout/disq.html" />
-</koken:if>
-<koken:include file="layout/footer.html" />
+            <div class="col-lg-12 text-xs-center" style="margin-bottom:15px;">
+                <koken:include file="inc/essay/essay-nav.html" />
+            </div>
+            <div class="col-md-8" style="margin-bottom:10px;">
+                <koken:featured_image>
+                        <koken:img class="timeline-photo img-rounded" lazy="true" fade="true" />
+                </koken:featured_image>
+                <p>
+                    {{ essay.content }}
+                </p>
+            </div>
+            <div class="col-md-4" style="margin-bottom:10px;">
+                <koken:include file="inc/essay/essay-sidebar.html" />
+            </div>
+        </div>
+
+        <koken:if true="settings.show_disqus">
+            <koken:include file="inc/disq.html" />
+        </koken:if>
+
+        <koken:include file="inc/footer.html" />
 </koken:load>

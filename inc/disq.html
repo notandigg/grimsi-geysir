@@ -1,0 +1,22 @@
+<script type="text/javascript">
+			$(document).ready(function () {
+				$('a[data-toggle="collapse"]').click(function () {
+					$(this).find('.show_hide_icon').toggleClass('fa-angle-up fa-angle-down');
+				})
+			})
+</script>
+
+<koken:discussion>
+<p class="text-xs-center">
+    <a class="btn btn-secondary btn-sm" data-toggle="collapse" href="#show_hide" aria-expanded="false">
+        Comments <i class="show_hide_icon fa fa-angle-down"></i> </span>
+    </a>
+</p>
+    <div class="collapse" id="show_hide">
+        <div class="container" style="border:0;">
+
+            {{ discussion }}
+
+        </div>
+    </div>
+</koken:discussion>

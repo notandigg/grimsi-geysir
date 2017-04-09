@@ -1,0 +1,60 @@
+<a href="#" class="ScrollTop text-uppercase"><button type="button" class="btn bg-primary text-uppercase"><i class="fa fa-angle-up"></i></button></a>
+
+<script>
+$(document).ready(function(){
+  $('.ScrollTop').click(function() {
+    $('html, body').animate({scrollTop: 0}, 1000);
+  return false;
+    });
+});
+
+$(window).scroll(function(){
+    var top = $(this).scrollTop();
+    if(top < 250){
+        $(".ScrollTop").removeClass("active");
+
+    } else{
+        $(".ScrollTop").addClass("active");
+    }
+});
+
+</script>
+
+<style>
+
+.ScrollTop button.btn {
+  border-radius: 50% !important;
+  z-index: 9999;
+  height: 50px;
+  width: 50px;
+  opacity: 0.7;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.ScrollTop button.btn:hover {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+*:focus {outline:none !important}
+
+.ScrollTop {
+  position:fixed;
+  bottom: 10px;
+  right: 10px;
+  visibility: hidden;
+}
+.ScrollTop.active {
+  visibility: visible;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+</style>

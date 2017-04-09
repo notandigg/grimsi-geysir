@@ -1,0 +1,8 @@
+.site-title-position{
+  position: absolute;
+  top: -4px;
+  left: 15px;
+  font-size: 40px;
+  display:inline-block;
+  transform-origin: 50% 70%;
+}

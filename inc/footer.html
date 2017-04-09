@@ -1,0 +1,53 @@
+</div>
+<koken:if true="settings.show_footer">
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+<koken:include file="inc/{{ settings.footer_columns }}.html" />
+                <!-- COPYRIGHT -->
+                <div class="col-xs-12 text-xs-center p-y-3"><koken:if true="settings.show_copyright"> <span class="text-muted">{{ site.copyright }}</span></koken:if>
+                    <koken:if true="settings.show_powered_by">
+                        <div class="text-muted">Powered by <a href="http://koken.me" target="_blank">Koken</a></div>
+                    </koken:if>
+                    <koken:if true="settings.show_designed_by">
+                        <div class="text-muted">Designed by <a href="http://grimur.net" target="_top">Grimur Gudmundsson</a></div>
+                    </koken:if>
+                    <!-- Social buttons -->
+                    <koken:if true="settings.show_social_buttons">
+                        <hr class="transparent" />
+                        <h2>
+                          <koken:profile_twitter>
+                            <a href="http://twitter.com/{{ profile.twitter }}">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </koken:profile_twitter>
+                          <koken:profile_facebook>
+                            <a href="{{ profile.facebook }}">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </koken:profile_facebook>
+                        </h2>
+                    </koken:if>
+                </div>
+
+            </div>
+        </div>
+        <!-- //COPYRIGHT -->
+        </div>
+        </div>
+        </div>
+        </div>
+    </footer>
+</koken:if>
+<koken:asset file="js/tether.min.js" async />
+<koken:asset file="js/bootstrap.min.js" async />
+<koken:asset file="js/wow.js" async />
+<koken:asset file="js/wow_settings.js" async />
+<koken:asset file="js/jquery.easing.min.js" async />
+<koken:asset file="jquery.pjax.js" common="true" />
+<koken:asset file="nprogress.js" common="true" />
+<koken:asset file="js/jscripts.min.js" async />
+<koken:asset file="js/jquery.row-grid.min.js" />
+<koken:include file="inc/scroll_top/scroll_top_{{ settings.scrolltotop }}.html" />
+</body>
+</html>

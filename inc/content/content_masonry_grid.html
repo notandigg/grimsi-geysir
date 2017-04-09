@@ -1,0 +1,15 @@
+<script>
+    $(document).ready(function(){
+      /* Start rowGrid.js */
+      $(".container-fluid").rowGrid({itemSelector: ".item", minMargin: 2, maxMargin: 2, firstItemClass: "first-item",resize: true});
+    });
+  </script>
+<div class="container-fluid" style="max-width:3000px;">
+  <koken:loop>
+    <div class="item">
+      <koken:link>
+        <koken:img width="600" height="400" lazy="true" fade="true" />
+      </koken:link>
+    </div>
+  </koken:loop>
+</div>

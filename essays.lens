@@ -1,5 +1,5 @@
-<koken:include file="layout/header.html" />
-<koken:include file="layout/nav.html" />
+<koken:include file="inc/header.html" />
+<koken:include file="inc/nav.html" />
 <div id="top" class="bg-alt">
   <div class="container-fluid">
 
@@ -7,7 +7,7 @@
   <div class="col-lg-12 text-xs-center">
     <h2 class="text-primary">{{ labels.essay.plural }}
     <koken:if true="{{ settings.show_essays_filter }}">
-    <koken:include file="layout/date_filter_essays.html" />
+    <koken:include file="inc/date_filter_essays.html" />
     </koken:if>
     </h2>
     <hr class="primary hidden-sm-up">
@@ -15,10 +15,10 @@
   </koken:if>
 
   <koken:load limit="{{ settings.essay_count }}" infinite="true">
-<koken:include file="layout/grid/essay-grid.html" />
+<koken:include file="inc/essay/essay-grid.html" />
   </koken:load>
   </div>
   </div>
-<koken:include file="layout/loading.html" />
+<koken:include file="inc/loading.html" />
 </div>
-<koken:include file="layout/footer.html" />
+<koken:include file="inc/footer.html" />

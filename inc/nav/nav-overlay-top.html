@@ -1,0 +1,120 @@
+<style>
+.modal-dialog{max-width:1600px;border:0;margin:0 auto!important;padding:0!important;height:100%}
+/*.k-search{margin-left:15px;margin-top:0;}*/
+input#k-search-tag{max-width: 100% !important; border:1px solid #eee;}
+input#k-search-tag:focus{border:1px solid #000;}
+</style>
+
+<script>
+   $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 10) {
+                $("button.btn.bg-no.navbar-toggle.collapsed").addClass("nav-button-scrolled");
+                $(".navbar-brand").fadeOut("fast");
+            } else {
+                $("button.btn.bg-no.navbar-toggle.collapsed").removeClass("nav-button-scrolled");
+                $(".navbar-brand").fadeIn("fast");
+            }
+        })
+    });
+</script>
+
+<div id="menuModal" class="modal {{ settings.menu_animation }}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row">
+<!--
+                    <koken:if true="{{ settings.show_search }}">
+                        <div class="col-md-6 center-block">
+                            <span style="position:absolute; top:0; left:0; z-index:999999;margin-top:-7px;"><koken:search /></span>
+                        </div>
+                    </koken:if>
+-->
+                    <div class="col-md-6 pull-right">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"><i class="fa fa-times fa-lg"></i></span> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+<koken:if true="{{ settings.show_search }}">
+                  <div class="col-md-12">
+                    <koken:search />
+                  </div>
+</koken:if>
+                    <!-- Pages -->
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <a class="menu-header">
+                            <h6 class="menu-title">{{ labels.page.plural }} </h6>
+                        </a>
+                        <div class="collapse in" id="collapsePage">
+                            <koken:navigation class="tag tag-outline btn-block" />
+                        </div>
+                    </div>
+                    <!-- Pages -->
+
+                    <!-- Albums -->
+                    <koken:load source="albums" filter:flat="true" order_by="modified_on" order_direction="desc">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <a class="menu-header">
+                                <h6 class="menu-title">{{ labels.album.plural }} </h6>
+                            </a>
+                            <div class="collapse in" id="collapseAlbum">
+                                <ul class="tag tag-outline btn-block">
+                                    <koken:loop>
+                                        <koken:if data="{{ album.album_type }}" equals="standard">
+                                            <li>
+                                                <koken:link title="{{ album.title }}">{{ album.title }}</koken:link>
+                                            </li>
+                                        </koken:if>
+                                    </koken:loop>
+                                </ul>
+                            </div>
+                        </div>
+                    </koken:load>
+                    <!-- Albums -->
+
+                    <!-- Tags -->
+                    <koken:load source="tags" limit="5" order_by="modified_on" order_direction="desc">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <a class="menu-header">
+                                <h6 class="menu-title">{{ labels.tag.plural }} </h6>
+                            </a>
+                            <div class="collapse in" id="collapseTags">
+                                <ul class="tag tag-outline btn-block">
+                                    <koken:loop>
+                                        <li>
+                                            <koken:link title="{{ tag.title }}"><i class="fa fa-tag"></i> {{ tag.title }} <span class="pull-xs-right">{{ tag.counts.total }}</span></koken:link>
+                                        </li>
+                                    </koken:loop>
+                                </ul>
+                            </div>
+                        </div>
+                    </koken:load>
+                    <!-- Tags -->
+
+                    <!-- Categories -->
+                    <koken:load source="categories" limit="5">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <a class="menu-header">
+                                <h6 class="menu-title">{{ labels.category.plural }} </h6>
+                            </a>
+                            <div class="collapse in" id="collapseCategory">
+                                <ul class="tag tag-outline btn-block">
+                                    <koken:loop>
+                                        <li>
+                                            <koken:link title="{{ category.title }}"><i class="fa fa-bookmark"></i> {{ category.title }} <span class="pull-xs-right">{{ category.counts.total }}</span></koken:link>
+                                        </li>
+                                    </koken:loop>
+                                </ul>
+                            </div>
+                        </div>
+                    </koken:load>
+                    <!-- Categories -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
