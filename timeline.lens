@@ -1,14 +1,24 @@
 <koken:include file="inc/header.html" />
 <koken:include file="inc/nav.html" />
-<div id="top" class="bg-alt">
+
+<koken:load>
+<!-- Add Facebook Open Graph tags for nicer sharing -->
+<koken:head>
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:description" content="{{ site.description strip_html='true' }}" />
+  <meta property="og:title" content="{{ labels.timeline.plural }}" />
+  <meta property="og:type" content="blog" />
+  <meta property="og:url" content="{{ location.site_url }}{{ location.here }}" />
+</koken:head>
+</koken:load>
+
+<div id="top">
     <div class="container-fluid text-xs-center">
             <koken:if true="settings.show_header">
-                <h2 class="text-primary"><span>{{ labels.timeline.plural }}</span>
-                <koken:if true="{{ settings.show_timeline_filter }}">
-                <koken:include file="inc/date_filter_timeline.html" />
-                </koken:if>
-                </h2>
-                <hr class="primary hidden-sm-up">
+            <koken:if true="{{ settings.show_timeline_filter }}">
+            <koken:include file="inc/date_filter_timeline.html" />
+            </koken:if>
+                <koken:if true="{{ settings.show_breadcrumbs }}"><h2 class="text-title" style="margin-top:10px;"><koken:breadcrumbs separator="/" show_home="false" link_current="false" /></h2></koken:if>
             </koken:if>
 <koken:include file="inc/timeline.html" />
 <koken:include file="inc/loading.html" />

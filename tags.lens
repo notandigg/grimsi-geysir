@@ -1,13 +1,12 @@
 <koken:include file="inc/header.html" />
 <koken:include file="inc/nav.html" />
 <koken:load limit="200">
-<div id="top" class="bg-alt">
+<div id="top">
   <div class="container">
     <div class="col-lg-12 text-xs-center m-y-2">
 
     <koken:if true="settings.show_header">
-      <h2 class="m-t-0 text-primary"> {{ labels.tag.plural }} </h2>
-      <hr class="primary hidden-sm-up">
+      <h2 class="m-t-0 text-title"> {{ labels.tag.plural }} </h2>
       </koken:if>
 
         <koken:tags>

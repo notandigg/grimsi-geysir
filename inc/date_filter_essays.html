@@ -1,5 +1,5 @@
 <div class="btn-group"">
-  <a class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Filter
   </a>
   <div class="dropdown-menu">
@@ -7,7 +7,6 @@
   <koken:dates filter:scope="month" limit_to="essays">
       <koken:loop separator=""><koken:link class="dropdown-item"><li>{{ date.title date_format="F" }} ({{ date.title date_format="Y" }})</li></koken:link></koken:loop>
   </koken:dates>
-  <div class="dropdown-divider"></div>
     <div class="dropdown-header"><strong>By year</strong></div>
     <koken:dates filter:scope="year" limit_to="essays">
         <koken:loop separator=""><koken:link class="dropdown-item"><li>{{ date.title date_format="Y" }}</li></koken:link></koken:loop>

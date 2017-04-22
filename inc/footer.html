@@ -3,14 +3,14 @@
     <footer id="footer">
         <div class="container">
             <div class="row">
-<koken:include file="inc/{{ settings.footer_columns }}.html" />
+<koken:include file="inc/footer/{{ settings.footer_columns }}.html" />
                 <!-- COPYRIGHT -->
-                <div class="col-xs-12 text-xs-center p-y-3"><koken:if true="settings.show_copyright"> <span class="text-muted">{{ site.copyright }}</span></koken:if>
+                <div class="col-xs-12 text-xs-center p-y-3"><koken:if true="settings.show_copyright"> <span>{{ site.copyright }}</span></koken:if>
                     <koken:if true="settings.show_powered_by">
-                        <div class="text-muted">Powered by <a href="http://koken.me" target="_blank">Koken</a></div>
+                        <div>Powered by <a href="http://koken.me" target="_blank">Koken</a></div>
                     </koken:if>
                     <koken:if true="settings.show_designed_by">
-                        <div class="text-muted">Designed by <a href="http://grimur.net" target="_top">Grimur Gudmundsson</a></div>
+                        <div>Designed by <a href="http://grimur.net" target="_top">Grimur Gudmundsson</a></div>
                     </koken:if>
                     <!-- Social buttons -->
                     <koken:if true="settings.show_social_buttons">

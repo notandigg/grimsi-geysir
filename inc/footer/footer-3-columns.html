@@ -1,34 +1,31 @@
 <!-- TAGS -->
-<div class="col-xs-12 col-sm-4">
-    <h6 class="text-uppercase text-xs-center text-primary">{{ labels.tag.plural }}</h6>
-    <hr class="primary" />
+<div class="col-xs-12 col-sm-4 text-xs-center">
+    <h6 class="text-uppercase text-xs-center">{{ labels.tag.plural }}</h6>
     <koken:load source="tags" limit="5">
         <koken:loop separator=" ">
-            <koken:link class="tag tag-primary"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
+            <koken:link><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
         </koken:loop>
     </koken:load>
 </div>
 <!-- //TAGS -->
 
 <!-- CATEGORIES -->
-<div class="col-xs-12 col-sm-4">
-    <h6 class="text-uppercase text-xs-center text-primary">{{ labels.category.plural }}</h6>
-    <hr class="primary" />
+<div class="col-xs-12 col-sm-4 text-xs-center">
+    <h6 class="text-uppercase text-xs-center">{{ labels.category.plural }}</h6>
     <koken:load source="categories" limit="5">
         <koken:loop separator=" ">
-            <koken:link class="tag tag-primary"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
+            <koken:link><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
         </koken:loop>
     </koken:load>
 </div>
 <!-- //CATEGORIES -->
 
 <!-- Recent essays -->
-<div class="col-xs-12 col-sm-4">
-    <h6 class="text-uppercase text-xs-center text-primary">Recent {{ labels.essay.plural }}</h6>
-    <hr class="primary" />
+<div class="col-xs-12 col-sm-4 text-xs-center">
+    <h6 class="text-uppercase text-xs-center">Recent {{ labels.essay.plural }}</h6>
     <koken:load source="essays" limit="5">
         <koken:loop separator="<br>">
-    <div><koken:link>{{ essay.title }}</koken:link></div> <div><span class="tag tag-primary"><koken:time relative="true" /></span></div>
+    <div class="text-xs-center text-truncate"><koken:link>{{ essay.title }}</koken:link></div> <div class="text-xs-center"><span><i class="fa fa-clock-o"></i> <koken:time relative="true" /></span></div>
         </koken:loop>
     </koken:load>
 </div>

@@ -1,21 +1,3 @@
-<style>
-.nav-tabs .nav-link {
-   border-radius:0;
-   -moz-border-radius: 0;
-   -webkit-border-radius: 0;
-   padding: .1em 1em;
-}
-.tab-content {
-   padding-left:8px;
-   padding:right:8px;
-   padding-top:10px;
-   padding-bottom:10px;
-}
-.nav-link.active {
-   background-color:#eee !important;
-}
-</style>
-
 <div class="text-xs-left" style="margin-top:8px;">
 
   <ul class="nav nav-tabs" id="info" role="tablist">
@@ -23,10 +5,10 @@
       <a class="nav-link active" data-toggle="tab" href="#info-tab" role="tab" aria-controls="info">Info</a>
     </li>
     <koken:if true="settings.show_exif">
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#exif-tab" role="tab" aria-controls="exif">Exif</a>
-    </li>
-  </koken:if>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#exif-tab" role="tab" aria-controls="exif">Exif</a>
+      </li>
+    </koken:if>
   </ul>
 
   <div class="tab-content">
@@ -34,93 +16,95 @@
 
       <!-- Context -->
       <koken:if true="settings.show_context">
-      <div>
+        <div>
           <koken:context>
+            <i class="fa fa-folder-o"></i>
+            <koken:link>
+              {{ context.title }}
+            </koken:link>
+            <br>{{ context.position }} of {{ context.total }}
+            <koken:else>
               <i class="fa fa-folder-o"></i>
-              <koken:link>
-                  {{ context.title }}
-              </koken:link>
-              <br>{{ context.position }} of {{ context.total }}
-              <koken:else>
-                <i class="fa fa-folder-o"></i>  <koken:link to="contents">{{ labels.content.plural }}</koken:link>
+              <koken:link to="contents">{{ labels.content.plural }}</koken:link>
           </koken:context>
-      </div>
+        </div>
       </koken:if>
 
       <!-- Captured date -->
       <koken:if true="settings.show_captured_date">
-      <div>
-          <strong>Captured</strong> <br>{{ content.captured_on date_only="true" }}
-      </div>
+        <div>
+          Captured: <br>{{ content.captured_on date_only="true" }}
+        </div>
       </koken:if>
 
       <!-- Published date -->
       <koken:if true="settings.show_published_date">
-      <div>
-              <strong>Published</strong><br> <koken:time relative="true" />
-      </div>
+        <div>
+          Published:<br>
+          <koken:time relative="true" />
+        </div>
       </koken:if>
 
       <!-- Caption -->
       <koken:if true="settings.show_caption">
-              <koken:not empty="content.caption">
-      <div>
-                  <strong>Caption</strong><br> {{ content.caption }}
-      </div>
-              </koken:not>
+        <koken:not empty="content.caption">
+          <div>
+            Caption<br> {{ content.caption }}
+          </div>
+        </koken:not>
       </koken:if>
 
       <!-- Tags -->
       <koken:if true="settings.show_tags">
-              <koken:tags>
-        <div>
-                <strong>{{ labels.tag.plural }}</strong><br>
-                  <koken:loop>
-                      <koken:link class="btn btn-sm btn-secondary"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
-                  </koken:loop>
-      </div>
-              </koken:tags>
+        <koken:tags>
+          <div>
+            {{ labels.tag.plural }}<br>
+            <koken:loop>
+              <koken:link><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
+            </koken:loop>
+          </div>
+        </koken:tags>
       </koken:if>
 
       <!-- Categories -->
       <koken:if true="settings.show_categories">
-              <koken:categories>
-      <div>
-                  <h6 class="text-muted" style="margin-top:10px;">{{ labels.category.plural }}</h6>
-                  <koken:loop>
-                      <koken:link class="btn btn-sm btn-secondary"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
-                  </koken:loop>
-      </div>
-          </koken:categories>
+        <koken:categories>
+          <div>
+            {{ labels.category.plural }}<br>
+            <koken:loop>
+              <koken:link><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
+            </koken:loop>
+          </div>
+        </koken:categories>
       </koken:if>
 
     </div>
 
-<koken:if true="settings.show_exif">
-    <div class="tab-pane" id="exif-tab" role="tabpanel">
+    <koken:if true="settings.show_exif">
+      <div class="tab-pane" id="exif-tab" role="tabpanel">
 
-      <koken:exif>
-        <koken:not empty="exif.model">
-          <p class="m-y-0"><strong>Camera:</strong> {{ exif.model }}</p>
-        </koken:not>
-        <koken:not empty="exif.exposure">
-          <p class="m-y-0"><strong>Exposure:</strong> {{ exif.exposure }}</p>
-        </koken:not>
-        <koken:not empty="exif.iso_speed_ratings">
-            <p class="m-y-0"><strong>ISO:</strong> {{ exif.iso_speed_ratings.raw }}</p>
+        <koken:exif>
+          <koken:not empty="exif.model">
+            <div class="m-y-0"><strong>Camera:</strong> {{ exif.model }}</div>
+          </koken:not>
+          <koken:not empty="exif.exposure">
+            <div class="m-y-0"><strong>Exposure:</strong> {{ exif.exposure }}</div>
+          </koken:not>
+          <koken:not empty="exif.iso_speed_ratings">
+            <div class="m-y-0"><strong>ISO:</strong> {{ exif.iso_speed_ratings.raw }}</div>
           </koken:not>
           <koken:not empty="exif.aperture">
-            <p class="m-y-0"><strong>Aperture:</strong> <span class="fstop">f</span>/{{ exif.aperture.computed }}</p>
+            <div class="m-y-0"><strong>Aperture:</strong> <span class="fstop">f</span>/{{ exif.aperture.computed }}</div>
           </koken:not>
-      </koken:exif>
+        </koken:exif>
 
-    </div>
-</koken:if>
+      </div>
+    </koken:if>
 
   </div>
 
   <script>
-    $(function () {
+    $(function() {
       $('#info a:first').tab('show')
     })
   </script>

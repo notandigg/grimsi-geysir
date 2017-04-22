@@ -4,10 +4,10 @@
 
         <!-- LOGO -->
         <koken:if data="settings.site_title_type" equals="image">
-            <koken:link to="front" class="navbar-brand nav-item page-scroll hidden-sm-down"><img src="{{ location.theme_path }}/img/{{ settings.img_name }}" style="position:absolute; top:0; left:0;" /></koken:link>
+            <koken:link to="front" class="navbar-brand nav-item page-scroll"><img src="{{ settings.img_path }}" style="position:absolute; top:0; left:0;" /></koken:link>
             <koken:else>
                 <koken:link to="front" class="navbar-brand nav-item page-scroll text-muted">
-                    <div class="site-title-position wow animated flip">{{ settings.site_title }}</div>
+                    <div class="site-title-position wow animated flip" id="logo-title">{{ site.title }}</div>
                 </koken:link>
         </koken:if>
         <!-- //LOGO -->

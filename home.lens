@@ -1,77 +1,92 @@
-<style></style>
 <koken:include file="inc/header.html" />
 <koken:include file="inc/nav.html" />
 <koken:load>
-    <koken:if true="settings.show_slideshow">
-        <div class="section-fill-height slideshow-container {{ settings.animation_type }}" id="slideshow">
-            <div id="ss_spinner"></div>
-            <koken:pulse jsvar="pulse" class="slideshow" width="100%" height="100%" crop="fill" loop="true" autostart="true" random="true" source="{{ settings.slideshow_source }}" />
-            <koken:if true="settings.show_slideshow_overlay">
-                <h2 class="{{ settings.animation_type }}" data-wow-duration="2s" data-wow-delay="0.5s"><koken:if true="{{ settings.show_intro_text }}"><span style="margin-bottom:10px;display:block;">{{ settings.intro_text }}</span></koken:if>
-    <koken:if true="settings.show_section_buttons">
-    <div class="btn-group hidden-sm-down" role="group" aria-label="Navigation">
-      <koken:if true="settings.content_front">
-        <a href="#{{ labels.content.plural }}" class="btn btn-secondary page-scroll {{ settings.animation_type_welcome }}" data-wow-duration="2s" data-wow-delay="0.5s" title="{{labels.content.plural}}" data-bind-to-key="right"> <i class="fa fa-photo fa-fw"></i> {{ labels.content.plural }} </a>
-      </koken:if>
-      <koken:if true="settings.album_front">
-        <a href="#{{ labels.album.plural }}" class="btn btn-secondary page-scroll {{ settings.animation_type_welcome }}" data-wow-duration="2s" data-wow-delay="0.5s"> <i class="fa fa-folder-o fa-fw"></i> {{ labels.album.plural }} </a>
-      </koken:if>
-      <koken:if true="settings.essay_front">
-        <a href="#{{ labels.essay.plural }}" class="btn btn-secondary page-scroll" title="{{labels.essay.plural}}"> <i class="fa fa-pencil fa-fw"></i> {{ labels.essay.plural }} </a>
-      </koken:if>
-    </div>
-    </koken:if>
-  </h2>
-            </koken:if>
-        </div>
-    </koken:if>
 
-    <!-- Content Section -->
-    <koken:if true="settings.content_front">
-        <section class="pb-0" id="{{ labels.content.plural }}">
-            <div class="container-fluid wow {{ settings.animation_type }} padding-0 margin-0">
-            <koken:load source="contents" limit="{{ settings.content_front_count }}">
-            <h2 class="m-t-0 text-primary text-xs-center">{{ labels.content.plural }}</h2>
-            <hr class="primary hidden-sm-up text-xs-center">
-            <koken:if data="settings.content_grid_layout" equals="masonry">
-            <koken:include file="inc/content/content_masonry_grid.html" />
-            </koken:if>
-            <koken:if data="settings.content_grid_layout" equals="bootstrap">
-            <koken:include file="inc/content/content_bootstrap_grid.html" />
-            </koken:if>
-            </koken:load>
-            </div>
-        </section>
-    </koken:if>
-    <!-- Content Section -->
-
-    <!-- Album Section -->
-    <koken:if true="settings.album_front">
-        <section id="{{ labels.album.plural }}" class="pb-0 bg-faded">
-            <div class="container-fluid wow animated {{ settings.animation_type }}">
-            <koken:load source="albums" limit="{{ settings.album_front_count }}">
-            <h2 class="m-t-0 text-primary text-xs-center">{{ labels.album.plural }}</h2>
-            <hr class="primary hidden-sm-up text-xs-center">
-            <koken:include file="inc/album/album-grid.html" />
-            </koken:load>
-            </div>
-        </section>
-    </koken:if>
-    <!-- Album Section -->
-
-    <!-- Essay Section -->
-    <koken:if true="settings.essay_front">
-        <section class="pb-0"  id="{{ labels.essay.plural }}">
-            <div class="container-fluid wow animated {{ settings.animation_type }}">
-            <koken:load source="essays" limit="{{ settings.essay_front_count }}">
-            <h2 class="m-t-0 text-primary text-xs-center">{{ labels.essay.plural }}</h2>
-            <hr class="primary hidden-sm-up text-xs-center">
-            <koken:include file="inc/essay/essay-grid.html" />
-            </koken:load>
-            </div>
-        </section>
-    </koken:if>
-    <!-- Essay Section -->
+  <koken:head>
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:description" content="{{ site.description strip_html='true' }}" />
+    <meta property="og:type" content="website" />
+    <koken:first>
+    <meta property="og:image" content="{{ content.presets.medium_large.url }}" />
+    <meta property="og:image:width" content="{{ content.presets.medium_large.width }}" />
+    <meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
+    </koken:first>
+    <meta property="og:url" content="{{ location.site_url }}{{ location.here }}" />
+    <koken:not empty="profile.twitter">
+      <meta name="twitter:card" content="gallery" />
+      <meta name="twitter:site" content="@{{ profile.twitter }}" />
+      <meta name="twitter:creator" content="@{{ profile.twitter }}" />
+      <koken:loop limit="4">
+        <meta name="twitter:image{{ index }}" content="{{ content.presets.medium_large.cropped.url }}">
+      </koken:loop>
+    </koken:not>
+  </koken:head>
 
 </koken:load>
-    <koken:include file="inc/footer.html" />
+
+
+<koken:if true="settings.show_slideshow">
+<div id="ss_spinner"></div>
+    <div id="slideshow">
+    <koken:pulse jsvar="pulse" crop="fill" loop="true" autostart="true" random="true" source="{{ settings.slideshow_source }}" />
+    </div>
+</koken:if>
+
+
+<script>
+  pulse.on( 'start', function() {
+    $('#ss_spinner').addClass('loading');
+  });
+  pulse.on( 'waiting', function(e) {
+    if (e) {
+      $('#ss_spinner').addClass('loading');
+    } else {
+      $('#ss_spinner').removeClass('loading');
+    }
+  });
+  pulse.on( 'dataloaded', function() {
+    $('#ss_spinner').removeClass('loading');
+  });
+</script>
+
+  <!-- Content Section -->
+  <koken:if true="settings.content_front">
+    <section id="content">
+      <div class="container-fluid padding-0 margin-0">
+        <koken:load source="contents" limit="{{ settings.content_front_count }}">
+          <h2 class="text-title text-xs-center">{{ labels.content.plural }}</h2>
+            <koken:include file="inc/content/content_bootstrap_grid.html" />
+        </koken:load>
+      </div>
+    </section>
+  </koken:if>
+  <!-- Content Section -->
+
+  <!-- Album Section -->
+  <koken:if true="settings.album_front">
+    <section id="album">
+      <div class="container-fluid wow animated {{ settings.animation_type }}">
+        <koken:load source="albums" limit="{{ settings.album_front_count }}">
+          <h2 class="text-title text-xs-center">{{ labels.album.plural }}</h2>
+          <koken:include file="inc/album/album-grid.html" />
+        </koken:load>
+      </div>
+    </section>
+  </koken:if>
+  <!-- Album Section -->
+
+  <!-- Essay Section -->
+  <koken:if true="settings.essay_front">
+    <section id="essay">
+      <div class="container-fluid wow animated {{ settings.animation_type }}">
+        <koken:load source="essays" limit="{{ settings.essay_front_count }}">
+          <h2 class="text-title text-xs-center">{{ labels.essay.plural }}</h2>
+          <koken:include file="inc/essay/essay-grid.html" />
+        </koken:load>
+      </div>
+    </section>
+  </koken:if>
+  <!-- Essay Section -->
+
+<koken:include file="inc/footer.html" />
