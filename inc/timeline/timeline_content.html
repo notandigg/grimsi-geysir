@@ -1,19 +1,19 @@
 <koken:event_content>
-    <div class="col-xs-{{ settings.columns_sm }} col-sm-{{ settings.columns_sm }} col-md-{{ settings.columns_sm }} col-lg-{{ settings.columns_md }} col-xl-{{ settings.columns_md }}">
-        <div class="card">
-            <koken:link to="contents"><i class="fa fa-file-image-o timeline_content_icon" aria-hidden="true" title="{{ labels.content.singular }}"></i></koken:link>
-            <span class="hidden-sm-down timeline_time"> <i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
-            <koken:link>
-                <koken:img class="timeline-photo" size="1:1" lazy="true" fade="true" />
-            </koken:link>
-            <koken:link>
-                <div class="card-header">
-                    <span class="card-title">{{ content.title | content.filename }}</span>
-                    <div class="hidden-sm-up"> <i class="fa fa-clock-o"></i>
-                        <koken:time relative="true" />
-                    </div>
-                </div>
-            </koken:link>
-        </div>
-    </div>
+<div class="kgrid_item">
+      <koken:link>
+        <koken:img class="timeline-photo" size="{{ settings.thumb_ratio_timeline }}" crop="true" lazy="true" fade="true" />
+      </koken:link>
+
+      <koken:link to="contents"><span class="timeline_icon"><i class="fa fa-file-image-o" aria-hidden="true" title="{{ labels.content.singular }}"></i></span></koken:link>
+      <span class="hidden-sm-down timeline_time"> <i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
+
+      <koken:link>
+        <h4 class="grid-footer">
+          <div class="text-truncate">{{ content.title | content.filename }}</div>
+          <div class="hidden-sm-up"> <i class="fa fa-clock-o"></i>
+            <koken:time relative="true" />
+          </div>
+        </h4>
+      </koken:link>
+</div>
 </koken:event_content>

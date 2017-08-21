@@ -26,22 +26,24 @@
 </koken:load>
 
 <div id="top">
-  <div class="container-fluid">
+  <div class="container-fluid text-xs-center">
 
-  <koken:if true="settings.show_header">
-  <div class="col-lg-12 text-xs-center">
-  <koken:if true="{{ settings.show_essays_filter }}">
-  <p><koken:include file="inc/date_filter_essays.html" /></p>
-  </koken:if>
-    <h2 class="text-title">{{ labels.essay.plural }}</h2>
-  </div>
-  </koken:if>
+    <koken:if true="{{ settings.show_essays_filter }}">
+      <div>
+        <koken:include file="inc/date_filter_essays.html" />
+      </div>
+    </koken:if>
 
-  <koken:load limit="{{ settings.essay_count }}" infinite="true">
-<koken:include file="inc/essay/essay-grid.html" />
-  </koken:load>
-  </div>
-  </div>
-<koken:include file="inc/loading.html" />
+
+    <koken:if true="{{ settings.show_header }}">
+      <h4 class="text-title">{{ language.essays }}</h4>
+    </koken:if>
 </div>
-<koken:include file="inc/footer.html" />
+
+<div class="container-fluid">
+<koken:load limit="30" infinite="true">
+    <koken:include file="inc/essay/essay-grid-pillar.html" />
+</koken:load>
+<koken:include file="inc/loading.html" />
+  </div>
+  <koken:include file="inc/footer.html" />

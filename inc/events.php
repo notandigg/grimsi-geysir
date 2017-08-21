@@ -1,5 +1,11 @@
+<koken:asset file="pillar.js" common="true" />
+<koken:include file="inc/pillar_timeline.html" />
+
+<div class="container-grid">
+  <div id="kgrid_timeline">
 <koken:loop>
     <koken:event>
+
         <!-- Album -->
         <koken:if true="settings.timeline_album">
             <koken:include file="inc/timeline/timeline_album.html" />
@@ -19,6 +25,8 @@
         <koken:if true="settings.timeline_essay">
             <koken:include file="inc/timeline/timeline_essay.html" />
         </koken:if>
+
     </koken:event>
 </koken:loop>
-<koken:include file="inc/loading.html" />
+</div>
+</div>

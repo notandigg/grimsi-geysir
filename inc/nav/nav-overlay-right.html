@@ -1,67 +1,61 @@
 <koken:asset file="css/sidebarMenu.css" />
 
-<script>
-    $('body').on('shown.bs.modal', '#menuModal', function() {
-        $("input.k-search-tag").css("max-width", "200px;");
-        $("input.k-search-tag").css("border-radius", "0;");
-    });
-    $(document).ready(function() {
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 10) {
-                $("button.btn.bg-no.navbar-toggle.collapsed").addClass("nav-button-scrolled");
-                $(".navbar-brand").fadeOut("fast");
-            } else {
-                $("button.btn.bg-no.navbar-toggle.collapsed").removeClass("nav-button-scrolled");
-                $(".navbar-brand").fadeIn("fast");
-            }
-        })
-    });
-</script>
+<div class="modal right fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
 
-	<div class="modal right fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModal">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></a>
+      </div>
 
-				<div class="modal-header">
-					<a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times fa-lg"></i></span></a>
-				</div>
+      <div class="modal-body">
 
-				<div class="modal-body">
-					<koken:navigation class="tag tag-outline btn-block" />
+        <koken:if true="{{ settings.show_search }}">
+        <div class="col-md-12">
+          <koken:search />
+        </div>
+        </koken:if>
 
-<div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="col-md-12">
+          <h5 class="menu-header">{{ settings.menu_title }}</h5>
+          <koken:navigation class="btn-block text-truncate text-capitalize" nested="true" />
+          <h5 class="menu-header">{{ settings.secmenu_title }}</h5>
+          <koken:navigation class="btn-block text-capitalize" nested="true" group="secondary" />
+          <h5 class="menu-header">{{ settings.socialmenu_title }}</h5>
+          <koken:navigation class="btn-block text-capitalize" group="social" />
+        </div>
+
+        <div class="col-md-12">
           <!-- Tags -->
           <koken:load source="tags" limit="5" order_by="modified_on" order_direction="desc">
-          <span>{{ labels.tag.plural }}</span>
-                      <ul class="tag tag-outline btn-block">
-                          <koken:loop>
-                              <li>
-                                  <koken:link title="{{ tag.title }}"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
-                              </li>
-                          </koken:loop>
-                      </ul>
+            <span class="text-uppercase">{{ language.tags }}</span>
+            <ul class="btn-block">
+              <koken:loop>
+                <li>
+                  <koken:link class="text-truncate" title="{{ tag.title }}"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
+                </li>
+              </koken:loop>
+            </ul>
           </koken:load>
           <!-- Tags -->
-</div>
-<div class="col-md-6 col-sm-12 col-xs-12">
+        </div>
+        <div class="col-md-12">
           <!-- Categories -->
           <koken:load source="categories" limit="5">
-          <span>{{ labels.category.plural }}</span>
-                      <ul class="tag tag-outline btn-block">
-                          <koken:loop>
-                              <li>
-                                  <koken:link title="{{ category.title }}"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
-                              </li>
-                          </koken:loop>
-                      </ul>
+            <span class="text-uppercase">{{ language.categories }}</span>
+            <ul class="btn-block">
+              <koken:loop>
+                <li>
+                  <koken:link class="text-truncate" title="{{ category.title }}"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
+                </li>
+              </koken:loop>
+            </ul>
           </koken:load>
           <!-- Categories -->
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 </div>
-
-<koken:search />
-
-				</div>
-
-			</div>
-		</div>
-	</div>

@@ -1,19 +1,17 @@
 <koken:event_album_update>
-    <div class="col-xs-{{ settings.columns_sm }} col-sm-{{ settings.columns_sm }} col-md-{{ settings.columns_sm }} col-lg-{{ settings.columns_md }} col-xl-{{ settings.columns_md }}">
-        <div class="card">
-            <koken:link to="albums"><i class="fa fa-folder-open-o timeline_album_icon" aria-hidden="true" title="{{ labels.album.singular }} update"></i></koken:link>
-            <span class="hidden-sm-down timeline_time"> <i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
-            <koken:link title="View {{ album.title }}">
-                <koken:img class="timeline-photo" size="1:1" lazy="true" fade="true" />
-            </koken:link>
-            <koken:link>
-                <div class="card-header">
-                    <span class="card-title text-xs-left">{{ album.title }} ({{ content.length }} new {{ content.length plural="items" singular="item" }})</span>
-                    <div class="hidden-sm-up"> <i class="fa fa-clock-o"></i>
-                        <koken:time relative="true" />
-                    </div>
-                </div>
-            </koken:link>
-        </div>
-    </div>
+<div class="kgrid_item">
+      <koken:link filter:order_by="published_on" filter:year="{{ date date_format='Y' }}" filter:month="{{ date date_format='m' }}" filter:day="{{ date date_format='d' }}">
+        <koken:img class="timeline-photo" size="{{ settings.thumb_ratio_timeline }}" crop="true" lazy="true" fade="true" />
+
+      <koken:link to="albums"><span class="timeline_icon"> <i class="fa fa-folder-open-o" aria-hidden="true" title="{{ labels.album.singular }} update"></i></span></koken:link>
+      <span class="hidden-sm-down timeline_time"> <i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
+
+        <h4 class="grid-footer">
+          <div class="text-xs-left text-truncate">{{ album.title }} ({{ content.length }} new {{ content.length plural="items" singular="item" }})</div>
+          <div class="hidden-sm-up"><i class="fa fa-clock-o"></i>
+            <koken:time relative="true" />
+          </div>
+        </h4>
+      </koken:link>
+</div>
 </koken:event_album_update>

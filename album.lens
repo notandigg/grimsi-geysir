@@ -1,27 +1,65 @@
+<koken:include file="inc/header.html" />
+<koken:include file="inc/nav.html" />
+
 <koken:load>
-    <koken:include file="inc/header.html" />
-    <koken:include file="inc/nav.html" />
 
-    <div id="top">
-        <div class="container-fluid padding-0 margin-0">
-            <div class="col-lg-12 text-xs-center">
-                <koken:if true="settings.show_header">
-                    <h2 class="m-t-0 text-title">{{ album.title }}</h2>
-                </koken:if>
-                <span class="text-muted">Published: <koken:time relative="true" /></span>
-                <h6 class="text-dark">{{ album.description }}</h6>
-                <p>
-                    <koken:include file="inc/breadcrumbs.html" />
-                </p>
-            </div>
-            <koken:if data="settings.content_grid_layout" equals="masonry">
-                <koken:include file="inc/content/content_masonry_grid.html" />
-            </koken:if>
-            <koken:if data="settings.content_grid_layout" equals="bootstrap">
-                <koken:include file="inc/content/content_bootstrap_grid.html" />
-            </koken:if>
+  <koken:head>
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{{ album.title strip_html=" true " }}" />
+    <meta property="og:description" content="{{ album.summary | album.description strip_html=" true " }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ album.url }}" />
+    <koken:covers>
+      <koken:shift>
+        <meta property="og:image" content="{{ content.presets.medium_large.url }}" />
+        <meta property="og:image:width" content="{{ content.presets.medium_large.width }}" />
+        <meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
+      </koken:shift>
+    </koken:covers>
+    <koken:not empty="profile.twitter">
+      <meta name="twitter:card" content="gallery" />
+      <meta name="twitter:site" content="@{{ profile.twitter }}" />
+      <meta name="twitter:creator" content="@{{ profile.twitter }}" />
+      <koken:covers minimum="4" limit="4">
+        <koken:loop>
+          <meta name="twitter:image{{ index }}" content="{{ content.presets.medium_large.cropped.url }}">
+        </koken:loop>
+      </koken:covers>
+    </koken:not>
+  </koken:head>
 
-        </div>
+  <div id="top">
+    <div class="container-grid">
+      <div class="col-lg-12 text-xs-center">
+        <koken:if true="settings.show_header">
+          <h4 class="m-t-0 text-title">{{ album.title }}</h4>
+        </koken:if>
+
+        <koken:if true="settings.show_album_time">
+          <span><i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
+        </koken:if>
+
+        <koken:if true="settings.show_album_download">
+          <koken:album_download>
+            <p>
+              <i class="fa fa-download"></i>
+              <koken:link title="{{ language.download }}">{{ album_download.title }}</koken:link>
+            </p>
+          </koken:album_download>
+        </koken:if>
+
+        <koken:if true="settings.show_album_description">
+          <p>{{ album.description|album.summary paragraph="true" }}</p>
+        </koken:if>
+
+        <p>
+          <koken:include file="inc/breadcrumbs.html" />
+        </p>
+
+      </div>
+      <koken:include file="inc/content/content_pillar_grid.html" />
+
     </div>
-    <koken:include file="inc/footer.html" />
+  </div>
+  <koken:include file="inc/footer.html" />
 </koken:load>

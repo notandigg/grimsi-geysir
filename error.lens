@@ -2,17 +2,12 @@
   <koken:include file="inc/header.html" />
   <koken:include file="inc/nav.html" />
   <div id="top">
-  <div class="container wow fadeIn">
-    <div class="col-lg-12 text-xs-center">
-      <h2 class="m-t-0 text-title">{{ routed_variables.code }}</h2>
-    </div>
-
-      <div class="col-lg-12 col-offset-2">
-      <div class="card">
-        <div class="card-block">
+    <div class="container-fluid wow fadeIn">
+      <div class="col-lg-12 text-xs-center">
+        <h4 class="m-t-0 text-title">{{ routed_variables.code }}</h4>
+      </div>
+      <div class="col-lg-12 text-xs-center">
         <p>There seems to be something wrong, a error {{ routed_variables.code }} has occurred</p>
-        </div>
-
       </div>
     </div>
   </div>

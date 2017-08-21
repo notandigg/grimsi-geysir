@@ -1,15 +1,19 @@
 <div class="container-fluid text-xs-center">
-<div class="col-xs-12">
-        <center>
-            <div id="ss_spinner_infinite" style="display:none;"></div>
-        </center>
-        <script>
-            $(window).on('k-infinite-loading', function() {
-                $('#ss_spinner_infinite').show();
-            });
-            $(window).on('k-infinite-loaded', function() {
-                $('#ss_spinner_infinite').hide();
-            });
-        </script>
-</div>
+  <div class="col-xs-12">
+    <center>
+      <div class="spinner" style="display:none;"></div>
+      <p class="loading_more_text" style="margin-top:65px;display:none;">{{ language.loading_more }}</p>
+    </center>
+
+    <script>
+      $(window).on('k-infinite-loading', function() {
+        $('.spinner').show();
+        $('p.loading_more_text').show();
+      });
+      $(window).on('k-infinite-loaded', function() {
+        $('.spinner').hide();
+        $('p.loading_more_text').hide();
+      });
+    </script>
+  </div>
 </div>

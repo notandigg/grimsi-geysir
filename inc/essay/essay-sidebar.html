@@ -1,49 +1,53 @@
+<ul>
 <koken:if true="settings.show_date">
-<p>
-<h6 class="text-muted">Posted:</h6>
-<koken:link><p class="btn btn-sm btn-secondary"><koken:time relative="{{ settings.date_relative }}" /></p></koken:link>
-</p>
+  <li>
+    <i class="fa fa-clock-o"></i> <span class="text-uppercase">{{ language.added }}</span><br>
+    <p>
+      <koken:time relative="{{ settings.date_relative }}" />
+    </p>
+  </li>
 </koken:if>
 
 <koken:if true="settings.show_share_buttons">
-<p>
-<h6 class="text-muted">Share:</h6>
-<p class="text-muted">
-    <koken:link class="btn btn-sm btn-secondary" share="twitter">Twitter <i class="fa fa-twitter"></i></koken:link>
-    <koken:link class="btn btn-sm btn-secondary" share="facebook">Facebook <i class="fa fa-facebook"></i></koken:link>
-    <koken:link class="btn btn-sm btn-secondary" share="pinterest">Pinterest <i class="fa fa-pinterest"></i></koken:link>
-    <koken:link class="btn btn-sm btn-secondary" share="tumblr">Tumblr <i class="fa fa-tumblr"></i></koken:link>
-    <koken:link class="btn btn-sm btn-secondary" share="google-plus">Google plus <i class="fa fa-google-plus"></i></koken:link>
-</p>
-</p>
+  <li>
+    <i class="fa fa-share"></i> <span class="text-uppercase">{{ language.share }}</span><br>
+    <p>
+      <koken:link class="btn btn-sm" share="twitter">Twitter <i class="fa fa-twitter"></i></koken:link>
+      <koken:link class="btn btn-sm" share="facebook">Facebook <i class="fa fa-facebook"></i></koken:link>
+      <koken:link class="btn btn-sm" share="pinterest">Pinterest <i class="fa fa-pinterest"></i></koken:link>
+      <koken:link class="btn btn-sm" share="tumblr">Tumblr <i class="fa fa-tumblr"></i></koken:link>
+      <koken:link class="btn btn-sm" share="google-plus">Google plus <i class="fa fa-google-plus"></i></koken:link>
+    </p>
+  </li>
 </koken:if>
 
 <koken:if true="settings.show_tags">
-<p>
-<koken:load filter:tag="{{ tag.id }}">
-    <koken:tags>
-        <p class="text-primary">
-            <h6 class="text-muted">{{ labels.tag.plural }}:</h6>
-            <koken:loop>
-                <koken:link class="btn btn-sm btn-secondary"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
-            </koken:loop>
+  <li>
+    <koken:load filter:tag="{{ tag.id }}">
+      <koken:tags>
+      <i class="fa fa-tags"></i> <span class="text-uppercase">{{ language.tags }}</span><br>
+        <p>
+          <koken:loop>
+            <koken:link class="btn btn-sm"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
+          </koken:loop>
         </p>
-    </koken:tags>
-</koken:load>
-</p>
+      </koken:tags>
+    </koken:load>
+  </li>
 </koken:if>
 
 <koken:if true="settings.show_categories">
-<p>
-<koken:load filter:category="{{ category.id }}">
-    <koken:categories>
-        <p class="text-primary">
-            <h6 class="text-muted">{{ labels.category.plural }}:</h6>
-            <koken:loop>
-                <koken:link class="btn btn-sm btn-secondary"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
-            </koken:loop>
+  <li>
+    <koken:load filter:category="{{ category.id }}">
+      <koken:categories>
+      <i class="fa fa-bookmark"></i> <span class="text-uppercase">{{ language.categories }}</span><br>
+        <p>
+          <koken:loop>
+            <koken:link class="btn btn-sm"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
+          </koken:loop>
         </p>
-    </koken:categories>
-</koken:load>
-</p>
+      </koken:categories>
+    </koken:load>
+  </li>
 </koken:if>
+</ul>

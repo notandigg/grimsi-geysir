@@ -1,0 +1,25 @@
+<style>
+footer#footer {
+  display:none;
+}
+</style>
+
+<div id="slideshow">
+<koken:pulse jsvar="pulse" crop="fill" loop="true" autostart="true" random="true" source="{{ settings.slideshow_source }}" height="100%" width="100%" />
+</div>
+
+<script>
+  pulse.on('start', function() {
+    NProgress.start();
+  });
+  pulse.on('waiting', function(e) {
+    if (e) {
+      NProgress.start();
+    } else {
+      NProgress.done();
+    }
+  });
+  pulse.on('dataloaded', function() {
+    NProgress.done();
+  });
+</script>

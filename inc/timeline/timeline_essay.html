@@ -1,28 +1,26 @@
 <koken:event_essay>
-
-    <div class="col-xs-{{ settings.columns_sm }} col-sm-{{ settings.columns_sm }} col-md-{{ settings.columns_sm }} col-lg-{{ settings.columns_md }} col-xl-{{ settings.columns_md }}">
-        <div class="card">
-            <koken:link to="essays"><i class="fa fa-file-text-o timeline_essay_icon" aria-hidden="true" title="{{ labels.essay.singular}}"></i></koken:link>
-            <span class="hidden-sm-down timeline_time"> <i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
-            <koken:if data="featured_image" equals="">
-                <koken:link> <img src="{{ location.theme_path }}/img/noimg.jpg" class="timeline-photo" style="width:100%;" /> </koken:link>
-                <koken:else>
-                    <koken:featured_image>
-                        <koken:link>
-                            <koken:img class="timeline-photo" size="1:1" lazy="true" fade="true" style="width:100%;" />
-                        </koken:link>
-                    </koken:featured_image>
-            </koken:if>
+<div class="kgrid_item">
+      <koken:if data="featured_image" equals="">
+        <koken:link> <img class="timeline-photo" src="{{ location.theme_path }}/img/noimg.jpg" /> </koken:link>
+        <koken:else>
+          <koken:featured_image>
             <koken:link>
-                <div class="card-header">
-                    <span class="card-title text-left">{{ essay.title }}</span>
-                    <div class="hidden-sm-up"> <i class="fa fa-clock-o"></i>
-                        <koken:time relative="true" />
-                    </div>
-
-                </div>
+              <koken:img class="timeline-photo" size="{{ settings.thumb_ratio_timeline }}" lazy="true" fade="true" />
             </koken:link>
-        </div>
-    </div>
+          </koken:featured_image>
+      </koken:if>
 
+<koken:link to="essays"><span class="timeline_icon"><i class="fa fa-file-text-o" aria-hidden="true" title="{{ labels.essay.singular}}"></i></span></koken:link>
+      <span class="hidden-sm-down timeline_time"> <i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
+
+      <koken:link>
+        <h4 class="grid-footer">
+          <div class="text-left text-truncate">{{ essay.title }}</div>
+          <div class="hidden-sm-up"> <i class="fa fa-clock-o"></i>
+            <koken:time relative="true" />
+          </div>
+
+        </h4>
+      </koken:link>
+</div>
 </koken:event_essay>

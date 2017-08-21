@@ -10,9 +10,9 @@
         "
         fill="transparent"
         stroke="#007fff"
-        stroke-width="2px"
+        stroke-width="1.8px"
         stroke-dasharray="50.5 50.5"
-        stroke-linecap="butt" />
+        stroke-linecap="square" />
   </g>
 
   <defs>

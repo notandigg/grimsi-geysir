@@ -1,0 +1,82 @@
+#content img {
+    max-width:[$lightbox_max_width]px;
+}
+
+#lbox_share {
+	display:[$lightbox_share];
+}
+
+body {
+	background:transparent;
+	color:[$lbox_color];
+}
+
+body#k-lightbox {
+	background:transparent;
+}
+
+footer {
+        display:[$lightbox_footer];
+}
+
+#lbox {
+	background-color:[$lbox_bg];
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.spinner {
+	border:2px solid [$lbox_spinner_bg];
+}
+
+.spinner:before {
+	border-top:2px solid [$lbox_spinner_bg_top];
+}
+
+a {
+	color:[$lbox_color];
+}
+
+a:hover,
+a:hover *,
+strong
+{
+	color:[$lbox_color_hover];
+}
+
+.ibutton {
+	color:[$lbox_color];
+	text-shadow:none;
+}
+
+.ibutton:hover {
+	color:[$lbox_color_hover] !important;
+}
+
+div#content img {
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+
+div#content div.caption {
+	width:100%
+}
+
+div#content div.caption strong {
+	display:inline;
+}
+
+#lbox_share_menu {
+	background-color:[$lbox_share_bg];
+}
+
+#lbox-bttn-share.open {
+	color:[$lbox_share_open];
+}
+
+/* When lightbox is linked to directly */
+body#k-lightbox.solo{
+	background-color:[$lbox_bg];
+}

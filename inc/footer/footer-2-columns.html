@@ -1,10 +1,9 @@
 <!-- TAGS -->
 <div class="col-xs-12 col-sm-6 text-xs-center">
-    <h2 class="text-uppercase text-xs-center">{{ labels.tag.plural }}</h2>
-    <hr class="primary" />
+    <h6 class="text-uppercase text-xs-center">{{ language.tags }}</h6>
     <koken:load source="tags" limit="5">
         <koken:loop separator=" ">
-            <koken:link><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
+            <koken:link class="btn btn-sm"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
         </koken:loop>
     </koken:load>
 </div>
@@ -12,10 +11,10 @@
 
 <!-- CATEGORIES -->
 <div class="col-xs-12 col-sm-6 text-xs-center">
-    <h2 class="text-uppercase text-xs-center">{{ labels.category.plural }}</h2>
+    <h6 class="text-uppercase text-xs-center">{{ language.categories }}</h6>
     <koken:load source="categories" limit="5">
         <koken:loop separator=" ">
-            <koken:link><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
+            <koken:link class="btn btn-sm"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
         </koken:loop>
     </koken:load>
 </div>

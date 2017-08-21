@@ -6,7 +6,7 @@
             <div class="col-lg-12 text-xs-center">
 
                 <koken:if true="settings.show_header">
-                    <h2 class="m-t-0 text-title">All recent content tagged #: {{ tag.title }}<span><sup>{{ tag.counts.total }}</sup></span></h2>
+                    <h4 class="m-t-0 text-title">#{{ tag.title }}<span><sup>{{ tag.counts.total }}</sup></span></h4>
                 </koken:if>
 
                 <div>
@@ -18,9 +18,9 @@
     </div>
     <koken:else>
         <div class="col-md-12">
-            <div id="top" class="bg-alt">
+            <div id="top">
                 <div class="container-fluid fadeIn">
-                    <h2 class="text-xs-center">Sorry, {{ language.no_items_were_found case="lower" }}</h2>
+                    <h2 class="text-xs-center m-y-3">{{ language.no_items_were_found case="upper" }}</h2>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-<a href="#" class="ScrollTop text-uppercase"><button type="button" class="btn bg-primary text-uppercase"><i class="fa fa-angle-up"></i></button></a>
+<a href="#" class="ScrollTop text-uppercase" title="{{ language.back_to_top }}"><div class="btn text-uppercase"><i class="fa fa-angle-up"></i></div></a>
 
 <script>
 $(document).ready(function(){
@@ -21,20 +21,17 @@ $(window).scroll(function(){
 </script>
 
 <style>
-.ScrollTop button.btn {
+.ScrollTop .btn {
   border-radius: 20px 5px 20px 5px !important;
+  padding: 1.45rem;
   z-index: 9999;
-  height: 50px;
-  width: 50px;
-  opacity: 0.7;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-.ScrollTop button.btn:hover {
-  opacity: 1;
+.ScrollTop .btn:hover {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;

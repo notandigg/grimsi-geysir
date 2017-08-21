@@ -1,56 +1,58 @@
-    <koken:include file="inc/header.html" />
-    <koken:include file="inc/nav.html" />
+<koken:include file="inc/header.html" />
+<koken:include file="inc/nav.html" />
 
-    <koken:load>
+<style>
+#content-container img {
+max-height:calc(90vh - 120px);
+}
+</style>
 
-      <koken:head>
-        <meta property="og:site_name" content="{{ site.title }}" />
-        <meta property="og:title" content="{{ site.title }}" />
-        <meta property="og:description" content="{{ site.description strip_html='true' }}" />
-        <meta property="og:type" content="website" />
-        <koken:first>
-        <meta property="og:image" content="{{ content.presets.medium_large.url }}" />
-        <meta property="og:image:width" content="{{ content.presets.medium_large.width }}" />
-        <meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
-        </koken:first>
-        <meta property="og:url" content="{{ location.site_url }}{{ location.here }}" />
-        <koken:not empty="profile.twitter">
-          <meta name="twitter:card" content="gallery" />
-          <meta name="twitter:site" content="@{{ profile.twitter }}" />
-          <meta name="twitter:creator" content="@{{ profile.twitter }}" />
-          <koken:loop limit="4">
-            <meta name="twitter:image{{ index }}" content="{{ content.presets.medium_large.cropped.url }}">
-          </koken:loop>
-        </koken:not>
-      </koken:head>
-
-    </koken:load>
 <koken:load>
-    <div id="top">
-        <div class="container fadeIn">
 
-            <koken:if true="settings.show_header">
-                <h2 class="m-t-0 text-title text-xs-center">{{ content.title | content.filename.clean  }}</h2>
-            </koken:if>
+  <koken:head>
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:description" content="{{ site.description strip_html='true' }}" />
+    <meta property="og:type" content="website" />
+    <koken:first>
+      <meta property="og:image" content="{{ content.presets.medium_large.url }}" />
+      <meta property="og:image:width" content="{{ content.presets.medium_large.width }}" />
+      <meta property="og:image:height" content="{{ content.presets.medium_large.height }}" />
+    </koken:first>
+    <meta property="og:url" content="{{ location.site_url }}{{ location.here }}" />
+    <koken:not empty="profile.twitter">
+      <meta name="twitter:card" content="gallery" />
+      <meta name="twitter:site" content="@{{ profile.twitter }}" />
+      <meta name="twitter:creator" content="@{{ profile.twitter }}" />
+      <koken:loop limit="4">
+        <meta name="twitter:image{{ index }}" content="{{ content.presets.medium_large.cropped.url }}">
+      </koken:loop>
+    </koken:not>
+  </koken:head>
 
-            <koken:include file="inc/content/content-nav.html" />
-            <div class="col-md-9 col-xs-12">
-                <koken:content_image>
-                    <koken:link lightbox="true">
-                        <koken:img respond_to="width" class="img-rounded center-block m-y-1" lazy="true" fade="true" />
-                    </koken:link>
-                </koken:content_image>
-                <koken:content_video>
-                    <!-- We have a video -->
-                    <koken:video class="img-fluid" />
-                </koken:content_video>
-            </div>
-            <div class="col-md-3 col-xs-12" style="margin-bottom:15px;">
-                <koken:include file="inc/content/content-sidebar.html" />
-            </div>
-        </div>
-        <koken:if true="settings.show_disqus">
-            <koken:include file="inc/disq.html" />
-        </koken:if>
-        <koken:include file="inc/footer.html" />
 </koken:load>
+<koken:load>
+  <div id="top">
+    <div class="container">
+        <koken:include file="inc/content/content-nav.html" />
+        <div class="col-md-9 col-xs-12 text-xs-center" id="content-container">
+          <koken:content_image>
+          <koken:link lightbox="true">
+            <koken:img class="img-rounded text-xs-center m-y-1 m-x-auto" id="content-sizing" lazy="true" fade="true" />
+          </koken:link>
+          </koken:content_image>
+          <koken:content_video>
+            <!-- We have a video -->
+            <koken:video class="img-fluid" />
+          </koken:content_video>
+        </div>
+        <div class="col-md-3 col-xs-12" style="margin-bottom:15px;">
+          <koken:include file="inc/content/content-sidebar.html" />
+        </div>
+    </div>
+    <koken:if true="settings.show_disqus">
+      <koken:include file="inc/disq.html" />
+    </koken:if>
+</koken:load>
+
+    <koken:include file="inc/footer.html" />

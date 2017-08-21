@@ -2,25 +2,34 @@
 <koken:include file="inc/nav.html" />
 
 <koken:load>
-<!-- Add Facebook Open Graph tags for nicer sharing -->
-<koken:head>
-  <meta property="og:site_name" content="{{ site.title }}" />
-  <meta property="og:description" content="{{ site.description strip_html='true' }}" />
-  <meta property="og:title" content="{{ labels.timeline.plural }}" />
-  <meta property="og:type" content="blog" />
-  <meta property="og:url" content="{{ location.site_url }}{{ location.here }}" />
-</koken:head>
+  <!-- Add Facebook Open Graph tags for nicer sharing -->
+  <koken:head>
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:description" content="{{ site.description strip_html='true' }}" />
+    <meta property="og:title" content="{{ labels.timeline.plural }}" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="{{ location.site_url }}{{ location.here }}" />
+  </koken:head>
 </koken:load>
 
 <div id="top">
-    <div class="container-fluid text-xs-center">
-            <koken:if true="settings.show_header">
-            <koken:if true="{{ settings.show_timeline_filter }}">
-            <koken:include file="inc/date_filter_timeline.html" />
-            </koken:if>
-                <koken:if true="{{ settings.show_breadcrumbs }}"><h2 class="text-title" style="margin-top:10px;"><koken:breadcrumbs separator="/" show_home="false" link_current="false" /></h2></koken:if>
-            </koken:if>
-<koken:include file="inc/timeline.html" />
+  <div class="container-fluid text-xs-center">
+
+    <koken:if true="{{ settings.show_timeline_filter }}">
+      <div style="margin-bottom:10px;">
+        <koken:include file="inc/date_filter_timeline.html" />
+      </div>
+    </koken:if>
+
+    <koken:if true="{{ settings.show_breadcrumbs }}">
+      <h4 class="text-title"><koken:breadcrumbs separator="/" show_home="false" link_current="false" /> </h4>
+    </koken:if>
+</div>
+
+<div class="container-fluid">
+<koken:load limit="30" infinite="true">
+    <koken:include file="inc/events.php" />
+</koken:load>
 <koken:include file="inc/loading.html" />
-        </div>
-    <koken:include file="inc/footer.html" />
+  </div>
+  <koken:include file="inc/footer.html" />

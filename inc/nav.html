@@ -1,17 +1,33 @@
+<script>
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      if ($(document).scrollTop() > 50) {
+        $(".btn.navbar-toggle.collapsed").addClass("nav-button-scrolled");
+        $("#down-button").css("display","none");
+      } else {
+        $(".btn.navbar-toggle.collapsed").removeClass("nav-button-scrolled");
+        $("#down-button").css("display","block");
+      }
+    })
+  });
+</script>
+
+<!-- LOGO -->
+<koken:if data="settings.site_title_type" equals="image">
+    <koken:link to="front" class="site-logo" title="{{ language.go }} {{ language.home }}" style="background-color:transparent;"><img src="{{ settings.img_path }}" /></koken:link>
+</koken:if>
+    <koken:if data="settings.site_title_type" equals="text">
+        <koken:link to="front">
+            <h4 class="site-logo" title="{{ language.go }} {{ language.home }}">{{ site.title }}</h4>
+        </koken:link>
+</koken:if>
+<koken:if data="settings.site_title_type" equals="nologo">
+</koken:if>
+<!-- //LOGO -->
+
 <nav id="topNav" class="navbar navbar-default navbar-fixed-top bg-nav">
     <div class="container-fixed">
-        <button type="button" class="btn bg-no navbar-toggle collapsed pull-right m-y-0" data-toggle="modal" data-target="#menuModal"><i class="fa fa-bars fa-2x"></i> </button>
-
-        <!-- LOGO -->
-        <koken:if data="settings.site_title_type" equals="image">
-            <koken:link to="front" class="navbar-brand nav-item page-scroll"><img src="{{ settings.img_path }}" style="position:absolute; top:0; left:0;" /></koken:link>
-            <koken:else>
-                <koken:link to="front" class="navbar-brand nav-item page-scroll text-muted">
-                    <div class="site-title-position wow animated flip" id="logo-title">{{ site.title }}</div>
-                </koken:link>
-        </koken:if>
-        <!-- //LOGO -->
-
+        <div class="btn navbar-toggle collapsed pull-right m-y-0" data-toggle="modal" data-target="#menuModal" title="{{ language.open_mobile_menu }}"><i class="fa fa-bars fa-2x"></i> </div>
 </nav>
 
 <koken:include file="inc/nav/nav-overlay-{{ settings.nav_style }}.html" />
