@@ -1,7 +1,7 @@
 <koken:include file="inc/header.html" />
 <koken:include file="inc/nav.html" />
 
-<koken:load>
+<koken:load limit="50" infinite="true">
 
   <koken:head>
     <meta property="og:site_name" content="{{ site.title }}" />
