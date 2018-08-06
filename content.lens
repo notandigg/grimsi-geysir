@@ -1,12 +1,6 @@
 <koken:include file="inc/header.html" />
 <koken:include file="inc/nav.html" />
 
-<style>
-#content-container img {
-max-height:calc(90vh - 120px);
-}
-</style>
-
 <koken:load>
 
   <koken:head>

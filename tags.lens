@@ -1,6 +1,6 @@
 <koken:include file="inc/header.html" />
 <koken:include file="inc/nav.html" />
-<koken:load limit="200">
+<koken:load limit="50" infinite="true">
 <div id="top">
   <div class="container">
     <div class="col-lg-12 text-xs-center m-y-2">

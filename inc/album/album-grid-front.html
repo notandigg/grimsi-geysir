@@ -1,0 +1,17 @@
+<koken:asset file="pillar.js" common="true" />
+<koken:include file="inc/pillar_album_front.html" />
+
+<div class="container-grid">
+  <div id="kgrid_album">
+    <koken:loop>
+      <div class="kgrid_item">
+
+        <koken:link title="{{ album.title }}">
+            <koken:img class="banner-photo" lazy="true" size="3:2" />
+            <div class="grid-footer text-truncate">{{ album.title }}</div>
+        </koken:link>
+
+      </div>
+    </koken:loop>
+  </div>
+</div>

@@ -6,20 +6,21 @@ footer#footer {
 
 <div id="slideshow">
 <koken:pulse jsvar="pulse" crop="fill" loop="true" autostart="true" random="true" source="{{ settings.slideshow_source }}" height="100%" width="100%" />
+<div class="spinner" style="display:none;"></div>
 </div>
 
 <script>
   pulse.on('start', function() {
-    NProgress.start();
+    $('.spinner').show();
   });
   pulse.on('waiting', function(e) {
     if (e) {
-      NProgress.start();
+      $('.spinner').show();
     } else {
-      NProgress.done();
+      $('.spinner').hide();
     }
   });
   pulse.on('dataloaded', function() {
-    NProgress.done();
+    $('.spinner').hide();
   });
 </script>

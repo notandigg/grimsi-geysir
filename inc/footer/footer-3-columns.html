@@ -1,7 +1,7 @@
 <!-- TAGS -->
 <div class="col-xs-12 col-md-3 text-xs-center">
-    <h6 class="text-uppercase text-xs-center">{{ language.tags }}</h6>
     <koken:load source="tags" limit="5">
+        <h6 class="text-uppercase text-xs-center">{{ language.tags }}</h6>
         <koken:loop separator=" ">
             <koken:link class="btn btn-sm"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
         </koken:loop>
@@ -11,8 +11,8 @@
 
 <!-- CATEGORIES -->
 <div class="col-xs-12 col-md-3 text-xs-center">
-    <h6 class="text-uppercase text-xs-center">{{ language.categories }}</h6>
     <koken:load source="categories" limit="5">
+        <h6 class="text-uppercase text-xs-center">{{ language.categories }}</h6>
         <koken:loop separator=" ">
             <koken:link class="btn btn-sm"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
         </koken:loop>
@@ -22,8 +22,8 @@
 
 <!-- Recent essays -->
 <div class="col-xs-12 col-md-6 text-xs-center">
-    <h6 class="text-uppercase text-xs-center">{{ language.recent_essays }}</h6>
     <koken:load source="essays" limit="5">
+        <h6 class="text-uppercase text-xs-center">{{ language.recent_essays }}</h6>
         <koken:loop separator="<br />">
     <div class="text-xs-center text-truncate"><koken:link>{{ essay.title }}</koken:link></div> <div class="text-xs-center"><span><i class="fa fa-clock-o"></i> <koken:time relative="true" /></span></div>
         </koken:loop>

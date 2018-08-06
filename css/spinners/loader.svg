@@ -1,118 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 18 18" preserveAspectRatio="xMidYMin meet">
-  <g>
-    <circle cx="0" cy="0" r="50%" width="100%" height="100%" fill="transparent" />
-    <path
-        d="M0,0 m-8,0
-        a8,8 0 1,1 16,0
-        a8,8 0 1,1 -16,0
-        "
-        fill="transparent"
-        stroke="#007fff"
-        stroke-width="1.8px"
-        stroke-dasharray="50.5 50.5"
-        stroke-linecap="square" />
-  </g>
-
-  <defs>
-    <style type="text/css">
-      g {
-        -webkit-transform-origin: 50% 50%;
-           -moz-transform-origin: 50% 50%;
-            -ms-transform-origin: 50% 50%;
-             -o-transform-origin: 50% 50%;
-                transform-origin: 50% 50%;
-
-        -webkit-animation: rotate 2s infinite ease-in-out;
-           -moz-animation: rotate 2s infinite ease-in-out;
-            -ms-animation: rotate 2s infinite ease-in-out;
-             -o-animation: rotate 2s infinite ease-in-out;
-                animation: rotate 2s infinite ease-in-out;
-
-        -webkit-transform: translate(8px, 8px) rotate(0deg);
-        -moz-transform: translate(8px, 8px) rotate(0deg);
-        -ms-transform: translate(8px, 8px) rotate(0deg);
-        -o-transform: translate(8px, 8px) rotate(0deg);
-        transform: translate(8px, 8px) rotate(0deg);
-      }
-
-      path {
-        stroke-dashoffset: 50.5;
-
-        -webkit-animation: circle 2s infinite ease-in-out;
-           -moz-animation: circle 2s infinite ease-in-out;
-            -ms-animation: circle 2s infinite ease-in-out;
-             -o-animation: circle 2s infinite ease-in-out;
-                animation: circle 2s infinite ease-in-out;
-      }
-
-      @-webkit-keyframes rotate {
-        to {
-          -webkit-transform: translate(8px, 8px) rotate(359deg);
-                  transform: translate(8px, 8px) rotate(359deg);
-        }
-      }
-
-      @-moz-keyframes rotate {
-        to {
-          -moz-transform: translate(8px, 8px) rotate(359deg);
-               transform: translate(8px, 8px) rotate(359deg);
-        }
-      }
-
-      @-ms-keyframes rotate {
-        to {
-          -ms-transform: translate(8px, 8px) rotate(359deg);
-              transform: translate(8px, 8px) rotate(359deg);
-        }
-      }
-
-      @-o-keyframes rotate {
-        to {
-          -o-transform: translate(8px, 8px) rotate(359deg);
-             transform: translate(8px, 8px) rotate(359deg);
-        }
-      }
-
-      @keyframes rotate {
-        to {
-          transform: translate(8px, 8px) rotate(359deg);
-        }
-      }
-
-      @-webkit-keyframes circle {
-        to {
-          stroke-dashoffset: -50.3;
-        }
-      }
-
-
-      @-moz-keyframes circle {
-        to {
-          stroke-dashoffset: -50.3;
-        }
-      }
-
-
-      @-ms-keyframes circle {
-        to {
-          stroke-dashoffset: -50.3;
-        }
-      }
-
-
-      @-o-keyframes circle {
-        to {
-          stroke-dashoffset: -50.3;
-        }
-      }
-
-      @keyframes circle {
-        to {
-          stroke-dashoffset: -50.3;
-        }
-      }
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="48" height="48" fill="black">
+  <circle transform="translate(8 0)" cx="0" cy="16" r="0">
+    <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0"
+      keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
+  </circle>
+  <circle transform="translate(16 0)" cx="0" cy="16" r="0">
+    <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0.3"
+      keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
+  </circle>
+  <circle transform="translate(24 0)" cx="0" cy="16" r="0">
+    <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0.6"
+      keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
+  </circle>
 </svg>

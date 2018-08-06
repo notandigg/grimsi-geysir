@@ -1,22 +1,5 @@
 <style>
-  .modal-dialog {
-    max-width: 1200px;
-    border: 0;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    height: 100%
-  }
-
-  h5.menu-header {
-    padding-top: 15px;
-    padding-bottom: 5px;
-  }
-
-  .k-search input {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+ .modal-dialog { max-width: 1200px; border: 0; margin: 0 auto !important; padding: 0 !important; height: 100% } .k-search input { max-width: 600px; margin-left: auto; margin-right: auto; }
 </style>
 
 <div class="modal {{ settings.menu_animation }}" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModal" data-backdrop="static">
@@ -41,7 +24,10 @@
               <h5 class="menu-header">{{ settings.menu_title }}</h5>
             <koken:navigation class="btn-block text-truncate text-capitalize" nested="true" />
             <koken:navigation class="btn-block text-capitalize" nested="true" group="secondary" />
+            <koken:not empty="settings.social">
+            <h5 class="menu-header">{{ language.geysir_social_media_ }}</h5>
             <koken:navigation class="btn-block text-capitalize" group="social" />
+            </koken:not>
           </div>
 
           <div class="col-md-4">

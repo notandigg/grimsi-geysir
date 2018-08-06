@@ -1,11 +1,11 @@
 <koken:event_essay>
 <div class="kgrid_item">
       <koken:if data="featured_image" equals="">
-        <koken:link> <img class="timeline-photo" src="{{ location.theme_path }}/img/noimg.jpg" /> </koken:link>
+        <koken:link> <img class="banner-photo" src="{{ location.theme_path }}/img/noimg.jpg" /> </koken:link>
         <koken:else>
           <koken:featured_image>
             <koken:link>
-              <koken:img class="timeline-photo" size="{{ settings.thumb_ratio_timeline }}" lazy="true" fade="true" />
+              <koken:img class="banner-photo" size="{{ settings.thumb_ratio_timeline }}" lazy="true" fade="true" />
             </koken:link>
           </koken:featured_image>
       </koken:if>

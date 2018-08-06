@@ -32,7 +32,7 @@
         </div>
     </koken:if>
 
-    <koken:load limit="50" infinite="true">
+    <koken:load limit="30" infinite="true">
             <koken:include file="inc/content/favorites_pillar_grid.html" />
     </koken:load>
 </div>

@@ -1,0 +1,36 @@
+<koken:include file="inc/header.html" />
+<koken:include file="inc/nav.html" />
+<style>
+input.klogin_input {
+	max-width: 500px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding-left:5px;
+	padding-right:5px;
+}
+input {
+max-width:200px;
+}
+h1 {
+	margin-top: 20px;
+}
+</style>
+<koken:load>
+<div id="top">
+  <div class="container-fluid wow fadeIn">
+    <div class="col-lg-12 text-xs-center">
+      <div id="klogin_form">
+        <h1 class="text-xs-center">Password required</h1>
+        <koken:form>
+          <koken:not empty="messages.koken_password_error">
+            <p class="password-error">{{ messages.koken_password_error }}</p>
+          </koken:not>
+          <input class="klogin_input" type="password" name="password" autofocus placeholder="Enter password" style="max-width:200px;" />
+        </koken:form>
+      </div>
+    </div>
+  </div>
+</div>
+<koken:include file="inc/footer.html" />
+</koken:load>

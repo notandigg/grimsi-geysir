@@ -19,16 +19,17 @@
         <div class="col-md-12">
             <h5 class="menu-header">{{ settings.menu_title }}</h5>
             <koken:navigation class="btn-block text-truncate text-capitalize" nested="true" />
-            <h5 class="menu-header">{{ settings.secmenu_title }}</h5>
             <koken:navigation class="btn-block text-capitalize" nested="true" group="secondary" />
-            <h5 class="menu-header">{{ settings.socialmenu_title }}</h5>
+            <koken:not empty="settings.social">
+            <h5 class="menu-header">{{ language.geysir_social_media_ }}</h5>
             <koken:navigation class="btn-block text-capitalize" group="social" />
+            </koken:not>
         </div>
 
         <div class="col-md-12">
           <!-- Tags -->
           <koken:load source="tags" limit="5" order_by="modified_on" order_direction="desc">
-            <span class="text-uppercase">{{ language.tags }}</span>
+            <h5 class="menu-header">{{ language.tags }}</h5>
             <ul class="btn-block">
               <koken:loop>
                 <li>
@@ -42,7 +43,7 @@
         <div class="col-md-12">
           <!-- Categories -->
           <koken:load source="categories" limit="5">
-            <span class="text-uppercase">{{ language.categories }}</span>
+            <h5 class="menu-header">{{ language.categories }}</h5>
             <ul class="btn-block">
               <koken:loop>
                 <li>

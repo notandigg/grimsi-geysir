@@ -1,11 +1,11 @@
 <koken:asset file="pillar.js" common="true" />
-<koken:include file="inc/pillar_favorites.html" />
+<koken:include file="inc/pillar_content_front.html" />
 <div class="container-grid">
-  <div id="kgrid_favorites">
+  <div id="kgrid_content">
     <koken:loop>
       <div class="kgrid_item">
         <koken:link lightbox="{{ settings.use_lightbox }}" title="{{ content.title | content.filename }}">
-          <koken:img class="banner-photo" lazy="true" fade="true" size="3:2" />
+            <koken:img class="banner-photo" lazy="true" fade="true" size="3:2" />
         </koken:link>
       </div>
     </koken:loop>

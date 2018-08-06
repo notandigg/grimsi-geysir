@@ -1,16 +1,27 @@
 <div class="text-xs-left" style="margin-top:8px;">
 
   <ul class="nav nav-tabs" id="info" role="tablist">
+
     <li class="nav-item">
-      <a class="nav-link active text-truncate" data-toggle="tab" href="#info-tab" role="tab" aria-controls="info" title="{{ language.geysir_info_ }}">Info</a>
+      <a class="nav-link active text-truncate" data-toggle="tab" href="#info-tab" role="tab" aria-controls="info" title="{{ language.geysir_info_ }}"><i class="fa fa-info"></i></a>
     </li>
+
     <koken:if true="settings.show_exif">
       <koken:not empty="content.exif">
         <li class="nav-item">
-          <a class="nav-link text-truncate" data-toggle="tab" href="#exif-tab" role="tab" aria-controls="exif" title="{{ language.geysir_exif_ }}">Exif</a>
+          <a class="nav-link text-truncate" data-toggle="tab" href="#exif-tab" role="tab" aria-controls="exif" title="{{ language.geysir_exif_ }}"><i class="fa fa-camera" aria-hidden="true"></i></a>
         </li>
       </koken:not>
     </koken:if>
+
+    <koken:if true="settings.show_content_download">
+    <koken:max_download>
+    <li class="nav-item">
+      <koken:link class="nav-link" role="tab" aria-controls="info" title="{{ language.download_image }}"><i class="fa fa-download" aria-hidden="true"></i></koken:link>
+    </li>
+    </koken:max_download>
+    </koken:if>
+
   </ul>
 
   <div class="tab-content">
@@ -68,17 +79,6 @@
             </li>
             <br>
           </koken:not>
-        </koken:if>
-
-        <koken:if true="settings.show_content_download">
-          <koken:max_download>
-            <li>
-              <i class="fa fa-download" aria-hidden="true"></i>
-              <koken:link>{{ language.download_image }}</koken:link>
-            </li>
-            <koken:else>
-            <br>
-          </koken:max_download>
         </koken:if>
 
         <!-- Tags -->

@@ -1,6 +1,6 @@
 <koken:include file="inc/header.html" />
 <koken:include file="inc/nav.html" />
-<koken:load order_by="modified_on" order_direction="desc">
+<koken:load order_by="created_on" limit="50" infinite="true">
 
 	<koken:head>
 		<meta property="og:site_name" content="{{ site.title }}" />

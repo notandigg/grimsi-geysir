@@ -8,12 +8,12 @@
 
         <koken:link title="{{ album.title }}">
           <koken:if data="{{ settings.img_scale_album }}" equals="uniform">
-            <koken:img lazy="true" size="{{ settings.thumb_ratio_album }}" />
+            <koken:img class="banner-photo" lazy="true" size="{{ settings.thumb_ratio_album }}" />
             <div class="grid-footer text-truncate">{{ album.title }}</div>
           </koken:if>
 
           <koken:if data="{{ settings.img_scale_album }}" equals="normal">
-            <koken:img lazy="true" fade="true" />
+            <koken:img class="banner-photo" lazy="true" fade="true" />
             <div class="grid-footer text-truncate">{{ album.title }}</div>
           </koken:if>
         </koken:link>
