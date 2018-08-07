@@ -1,6 +1,6 @@
 {
 	"name": "Geysir",
-	"version": "1.6.1.1",
+	"version": "1.6.1",
 	"description": "Free Bootstrap4 theme for Koken, with Pjax, Nprogress (for smoother/faster content and essay browsing) & Koken search compatible. And now also supports languages",
 	"demo": "http://grimur.net",
 	"author": {
@@ -529,7 +529,7 @@
 					"value": 0,
 					"suffix": "px",
 					"reload_preview": true
-				},
+				},				
 				"slideshow_source": {
 					"note": "Choose the source for the slideshow",
 					"note_align": "left",
