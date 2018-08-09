@@ -5,11 +5,11 @@ Koken is a CMS focused on photography
 <h1>Installation</h1>
 <h6>Install Koken</h6>
 <i>Navigate to the themes folder (best via ftp):</i><br>
-http://yoursite.com/storage/themes<br>
+/storage/themes<br>
 Open a new browser window to login to your admin:<br>
-http://yoursite.com/admin/#/site/themes<br>
+/admin/#/site/themes<br>
 Select 'grimsi-geysir' from the list of themes<br>
 Click the Use theme button to enable this theme<br>
 <i>This theme is open-sourced software licensed under the MIT license.</i><br><br>
 <h1>Demo:</h1>
-<a href="http://grimur.net">http://grimur.net</a>
+<a href="http://grimur.net">https://grimur.net/portfolio/</a>
