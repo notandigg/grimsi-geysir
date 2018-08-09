@@ -38,17 +38,17 @@
 		"de": {
 			"geysir_caption_": "Beschreibung",
 			"geysir_uploaded_": "Hochgeladen",
-			"geysir_captured_": "Erfasst",
+			"geysir_captured_": "Aufgenommen",
 			"geysir_also_in_": "Auch in",
 			"geysir_comments_": "Bemerkungen",
-			"geysir_by_month_": "By month",
-			"geysir_by_year_": "By year",
+			"geysir_by_month_": "Nach Monat",
+			"geysir_by_year_": "Nach Jahr",
 			"geysir_filter_": "Filter",
 			"geysir_exif_": "Exif",
 			"geysir_info_": "Info",
-			"geysir_category_": "Category",
-			"geysir_scroll_down_": "Down",
-			"geysir_social_media_": "Social networks"
+			"geysir_category_": "Kategorie",
+			"geysir_scroll_down_": "Runter",
+			"geysir_social_media_": "Soziale Medien"
 		},
 		"el": {
 			"geysir_caption_": "Λεζάντα",
