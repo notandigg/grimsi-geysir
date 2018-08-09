@@ -4,7 +4,7 @@ Koken is a CMS focused on photography
 <br><br>
 <h1>Installation</h1>
 <h6>Install Koken</h6>
-<i>Navigate to the themes folder:</i><br>
+<i>Navigate to the themes folder (best via ftp):</i><br>
 http://yoursite.com/storage/themes<br>
 Open a new browser window to login to your admin:<br>
 http://yoursite.com/admin/#/site/themes<br>
