@@ -42,13 +42,12 @@
       <koken:include file="inc/essay/essay-nav.html" />
     </div>
 
-      <div class="col-md-8" style="margin-bottom:10px;">
+    <koken:featured_image>
+      <koken:link><koken:img class="timeline-photo img-rounded" lazy="true" style="object-fit:cover;width:100%;max-height:400px;margin-bottom:10px;" /></koken:link>
+      <hr />
+    </koken:featured_image>
 
-        <koken:featured_image>
-          <koken:link lightbox="true">
-            <koken:img class="timeline-photo img-rounded" lazy="true" />
-          </koken:link>
-        </koken:featured_image>
+      <div class="col-md-8" style="margin-bottom:10px;">
 
           <p>{{ essay.content paragraph="true" }}</p>
 

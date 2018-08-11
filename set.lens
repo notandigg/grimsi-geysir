@@ -46,5 +46,10 @@
 <koken:include file="inc/album/album-grid.html" />
 </div>
 </div>
+<koken:else>
+<koken:note>
+  <p class="text-xs-center">No content found</p>
+</koken:note>
+<p class="text-xs-center">No content found</p>
 </koken:load>
 <koken:include file="inc/footer.html" />

@@ -37,6 +37,7 @@
 
         <koken:if true="settings.show_album_time">
           <span><i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
+          <span><i class="fa fa-image"></i> {{ album.counts.total }}</span>
         </koken:if>
 
         <koken:if true="settings.show_album_download">
@@ -58,6 +59,11 @@
 
       </div>
       <koken:include file="inc/content/content_pillar_grid.html" />
+      <koken:else>
+      <koken:note>
+        <p class="text-xs-center">No content found</p>
+      </koken:note>
+      <p class="text-xs-center">No content found</p>
 </koken:load>
       <koken include file="inc/loading.html" />
     </div>
