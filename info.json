@@ -1227,6 +1227,22 @@
             "value": "footer-3-columns"
           }],
           "value": "footer-3-columns"
+        },
+        "footer_essay_list_count": {
+          "label": "Essay footer count",
+          "type": "slider",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [{
+              "option": "show_footer",
+              "not": "false"
+            }]
+          },
+          "value": 8,
+          "reload_preview": true
         }
       }
     },

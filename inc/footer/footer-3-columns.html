@@ -1,32 +1,34 @@
 <!-- TAGS -->
 <div class="col-xs-12 col-md-3 text-xs-center">
-    <koken:load source="tags" limit="5">
-        <h6 class="text-uppercase text-xs-center">{{ language.tags }}</h6>
-        <koken:loop separator=" ">
-            <koken:link class="btn btn-sm"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
-        </koken:loop>
-    </koken:load>
+  <koken:load source="tags" limit="5">
+    <h6 class="text-uppercase text-xs-center">{{ language.tags }}</h6>
+    <koken:loop separator=" ">
+      <koken:link class="btn btn-sm"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
+    </koken:loop>
+  </koken:load>
 </div>
 <!-- //TAGS -->
 
 <!-- CATEGORIES -->
 <div class="col-xs-12 col-md-3 text-xs-center">
-    <koken:load source="categories" limit="5">
-        <h6 class="text-uppercase text-xs-center">{{ language.categories }}</h6>
-        <koken:loop separator=" ">
-            <koken:link class="btn btn-sm"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
-        </koken:loop>
-    </koken:load>
+  <koken:load source="categories" limit="5">
+    <h6 class="text-uppercase text-xs-center">{{ language.categories }}</h6>
+    <koken:loop separator=" ">
+      <koken:link class="btn btn-sm"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
+    </koken:loop>
+  </koken:load>
 </div>
 <!-- //CATEGORIES -->
 
 <!-- Recent essays -->
 <div class="col-xs-12 col-md-6 text-xs-center">
-    <koken:load source="essays" limit="5">
-        <h6 class="text-uppercase text-xs-center">{{ language.recent_essays }}</h6>
-        <koken:loop separator="<br />">
-    <div class="text-xs-center text-truncate"><koken:link>{{ essay.title }}</koken:link></div> <div class="text-xs-center"><span><i class="fa fa-clock-o"></i> <koken:time relative="true" /></span></div>
-        </koken:loop>
-    </koken:load>
+  <koken:load source="essays" limit="{{ settings.footer_essay_list_count }}">
+    <h6 class="text-uppercase text-xs-center">{{ language.recent_essays }}</h6>
+    <koken:loop separator="">
+      <div class="text-xs-center footer_essay_list">
+        <koken:link>{{ essay.title }}<br /><span><i class="fa fa-clock-o"></i> <koken:time relative="true" /></span></koken:link>
+      </div>
+    </koken:loop>
+  </koken:load>
 </div>
 <!-- //Recent essays -->
