@@ -57,6 +57,22 @@
       <!-- Content Section -->
     </div>
   </koken:if>
+  <koken:if true="settings.featured_front_albums">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+      <!-- Featured Album Section -->
+      <section id="featured_album">
+        <div class="container-fluid">
+          <h2 class="text-title text-xs-center">
+          <koken:link to="albums" title="{{ language.view_all_albums }}">{{ language.albums }}<span style="font-size:large;padding-left:5px;"><i class="fa fa-share"></i></span></koken:link>
+        </h2>
+          <koken:load source="albums" flat="true" limit="4" order_by="published_on" order_direction="desc">
+            <koken:include file="inc/album/featured-album-grid-front.html" />
+          </koken:load>
+        </div>
+      </section>
+      <!-- Featured Album Section -->
+    </div>
+  </koken:if>
   <koken:if true="settings.front_albums">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
       <!-- Album Section -->
