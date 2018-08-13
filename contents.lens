@@ -1,16 +1,21 @@
 <koken:include file="inc/header.html" />
 <koken:include file="inc/nav.html" />
 <div id="top">
+  <div class="col-lg-12 text-xs-center">
     <koken:if true="settings.show_header">
-        <div class="col-lg-12 text-xs-center">
-            <h4 class="m-t-0 text-title">{{ language.content }}</h4>
-        </div>
+      <h4 class="m-t-0 m-b-0 text-title">{{ language.content }}</h4>
     </koken:if>
+    <koken:if true="settings.show_content_count">
+      <div class="m-b-3"><i class="fa fa-image"></i>
+        <koken:load source="contents">{{ content.counts.total }}</koken:load>
+      </div>
+    </koken:if>
+  </div>
 
-    <koken:load limit="50" infinite="true">
+  <koken:load limit="50" infinite="true">
     <koken:include file="inc/content/content_pillar_grid.html" />
-    </koken:load>
-    <koken:include file="inc/loading.html" />
+  </koken:load>
+  <koken:include file="inc/loading.html" />
 </div>
 </div>
 <koken:include file="inc/footer.html" />

@@ -90,34 +90,29 @@ a.dropdown-item:hover, .dropdown-item:hover {
 }
 
 .nav-tabs .nav-item.open .nav-link, .nav-tabs .nav-item.open .nav-link:focus, .nav-tabs .nav-item.open .nav-link:hover, .nav-tabs .nav-link.active, .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover {
-  color: [$tab_active_color];
-  background-color: transparent;
-  border-color: [$tab_active_bg] [$tab_active_bg] [$tab_active_bg]
+    color: [$tab_active_color];
+    background-color: transparent;
+    border-color: [$tab_active_bg] [$tab_active_bg] [$tab_active_bg];
 }
 
 .nav-tabs:hover {
-  border-color: [$tab_active_bg] [$tab_active_bg] [$tab_active_bg]
+  border-color: [$tab_active_bg] [$tab_active_bg] [$tab_active_bg];
 }
 
 .nav-tabs .nav-link {
-  display: block;
-  padding: .5em 1em;
-  border: 1px solid transparent;
-  border-top-right-radius: .25rem;
-  border-top-left-radius: .25rem
+    display: block;
+    padding: .5em 1em;
+    border: 1px solid transparent;
+    border-top-right-radius: .25rem;
+    border-top-left-radius: .25rem;
 }
 
 .nav-tabs {
-  border-bottom: 1px solid [$tab_active_bg]
+    border-bottom: 1px solid [$tab_active_bg];
 }
 
 #content {
   background-color: [$content_bg];
-  padding-bottom: 0
-}
-
-#featured_album {
-  background-color: [$featured_album_bg];
   padding-bottom: 0
 }
 
@@ -128,11 +123,6 @@ a.dropdown-item:hover, .dropdown-item:hover {
 
 #essay {
   background-color: [$essay_bg];
-  padding-bottom: 0
-}
-
-#featured_essay {
-  background-color: [$featured_essay_bg];
   padding-bottom: 0
 }
 
@@ -223,7 +213,7 @@ ul.btn-block li a:hover {
   margin-bottom: 3px
 }
 
-.btn, a.btn, .btn a, button, button a, .nav-arrow {
+.btn, a.btn, .btn a, button, button a {
   background-color: [$btn_bg];
   border: 1px solid [$btn_border_color];
   color: [$btn_color];
@@ -265,7 +255,7 @@ a.nav-link.nav-item {
   display: table-cell
 }
 
-img.k-lazy-loading, #kgrid.kgrid_item_content img.k-lazy-loading, #kgrid.kgrid_item_album img.k-lazy-loading, #kgrid.kgrid_item_featured_album img.k-lazy-loading, #kgrid.kgrid_item_fav img.k-lazy-loading, #kgrid.kgrid_item_essay img.k-lazy-loading {
+img.k-lazy-loading, #kgrid.kgrid_item_content img.k-lazy-loading, #kgrid.kgrid_item_album img.k-lazy-loading, #kgrid.kgrid_item_fav img.k-lazy-loading, #kgrid.kgrid_item_essay img.k-lazy-loading {
   background: url(css/spinners/loader2.svg) center center no-repeat;
   background-size: 32px 32px
 }
@@ -1392,10 +1382,8 @@ h5.menu-header:after {
   .timeline-photo {
     object-fit: cover;
     object-position: top center;
-    width: 100%;
-    height: 150px;;
-    margin-left:auto;
-    margin-right:auto;
+    width:100vw;
+    height:150px;
   }
 }
 
@@ -1428,6 +1416,6 @@ h5.menu-header:after {
     object-fit: cover;
     width: 100%;
     margin-bottom: 10px;
-    height: 400px
+    height: 400px;
   }
 }

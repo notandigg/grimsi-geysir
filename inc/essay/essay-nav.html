@@ -1,15 +1,19 @@
-<div class="btn-group">
+<center>
+<div class="m-b-3">
+<div class="btn_group">
 <koken:previous>
-  <koken:link class="btn" id="nav-back" bind_to_key="left" title="{{ language.view }} {{ essay.title }}">
+  <koken:link class="btn btn-lg" id="nav-back" bind_to_key="left" title="{{ language.view }} {{ essay.title }}">
   <i class="fa fa-angle-left"></i> <span class="hidden-sm-down">{{ essay.title truncate="25" }}</span>
 </koken:link>
 </koken:previous>
-<koken:link class="btn" id="nav-return" to="essays" title="{{ language.view_all_essays }}">
+<koken:link class="btn btn-lg" id="nav-return" to="essays" title="{{ language.view_all_essays }}">
   <i class="fa fa-level-up" aria-hidden="true"></i>
 </koken:link>
 <koken:next>
-  <koken:link class="btn" id="nav-forward" bind_to_key="right" title="{{ language.view }} {{ essay.title }}">
+  <koken:link class="btn btn-lg" id="nav-forward" bind_to_key="right" title="{{ language.view }} {{ essay.title }}">
   <span class="hidden-sm-down">{{ essay.title truncate="25" }}</span> <i class="fa fa-angle-right"></i>
   </koken:link>
 </koken:next>
 </div>
+</div>
+</center>

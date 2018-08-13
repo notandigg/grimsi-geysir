@@ -1,0 +1,22 @@
+<koken:asset file="pillar.js" common="true" />
+<koken:include file="inc/pillar_featured_essay_front.html" />
+
+<div class="container-grid">
+  <div id="kgrid_featured_essay">
+    <koken:loop>
+      <div class="kgrid_item">
+        <koken:link title="{{ essay.title }}">
+          <span class="hidden-sm-down timeline_time"> <i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
+          <koken:if data="featured_image" equals="">
+            <img class="banner-photo" src="{{ location.theme_path }}/img/noimg.jpg" />
+            <koken:else>
+              <koken:featured_image>
+                <koken:img class="banner-photo" crop="true" lazy="true" fade="true" />
+              </koken:featured_image>
+          </koken:if>
+          <h4 class="grid-footer text-truncate">{{ essay.title }}</h4>
+        </koken:link>
+      </div>
+    </koken:loop>
+  </div>
+</div>

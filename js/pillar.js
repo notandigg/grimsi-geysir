@@ -12,7 +12,6 @@ $('#kgrid_content').pillar({
   }
 });
 
-
 $('#kgrid_album').pillar({
   items: '.kgrid_item',
   spacing: this.spacing_album,
@@ -27,7 +26,35 @@ $('#kgrid_album').pillar({
   }
 });
 
+$('#kgrid_featured_album').pillar({
+  items: '.kgrid_item',
+  spacing: this.spacing_album,
+  columns: {
+    '479': this.mobCol_album,
+    '767': this.mobCol_album,
+    '959': this.tabletCol_album,
+    'max': this.maxCols_album
+  },
+  imageLoaded: function() {
+    $(this).closest('.kgrid_item').addClass('loaded')
+  }
+});
+
 $('#kgrid_essay').pillar({
+  items: '.kgrid_item',
+  spacing: this.spacing_essay,
+  columns: {
+    '479': this.mobCol_essay,
+    '767': this.mobCol_essay,
+    '959': this.tabletCol_essay,
+    'max': this.maxCols_essay
+  },
+  imageLoaded: function() {
+    $(this).closest('.kgrid_item').addClass('loaded')
+  }
+});
+
+$('#kgrid_featured_essay').pillar({
   items: '.kgrid_item',
   spacing: this.spacing_essay,
   columns: {

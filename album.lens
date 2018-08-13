@@ -32,25 +32,26 @@
     <div class="container-grid">
       <div class="col-lg-12 text-xs-center">
         <koken:if true="settings.show_header">
-          <h4 class="m-t-0 text-title">{{ album.title }}</h4>
+          <h4 class="m-t-0 m-b-0 text-title">{{ album.title }}</h4>
         </koken:if>
+
+        <koken:if true="settings.show_content_count"><span><i class="fa fa-image"></i> {{ album.counts.total }}</span></koken:if>
 
         <koken:if true="settings.show_album_time">
           <span><i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
-          <span><i class="fa fa-image"></i> {{ album.counts.total }}</span>
         </koken:if>
 
         <koken:if true="settings.show_album_download">
           <koken:album_download>
-            <p>
+            <div>
               <i class="fa fa-download"></i>
               <koken:link title="{{ language.download }}">{{ album_download.title }}</koken:link>
-            </p>
+            </div>
           </koken:album_download>
         </koken:if>
 
         <koken:if true="settings.show_album_description">
-          <p>{{ album.description|album.summary paragraph="true" }}</p>
+          <div>{{ album.description|album.summary paragraph="true" }}</div>
         </koken:if>
 
         <p>

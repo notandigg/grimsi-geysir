@@ -33,7 +33,8 @@
       "geysir_info_": "Upplýsingar",
       "geysir_category_": "Flokkur",
       "geysir_scroll_down_": "Niður",
-      "geysir_social_media_": "Samfélagsmiðlar"
+      "geysir_social_media_": "Samfélagsmiðlar",
+      "geysir_menu_": "Valmynd"
     },
     "de": {
       "geysir_caption_": "Beschreibung",
@@ -48,7 +49,8 @@
       "geysir_info_": "Info",
       "geysir_category_": "Kategorie",
       "geysir_scroll_down_": "Runter",
-      "geysir_social_media_": "Soziale Medien"
+      "geysir_social_media_": "Soziale Medien",
+      "geysir_menu_": "Menü"
     },
     "el": {
       "geysir_caption_": "Λεζάντα",
@@ -63,7 +65,8 @@
       "geysir_info_": "Info",
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
-      "geysir_social_media_": "Social networks"
+      "geysir_social_media_": "Social networks",
+      "geysir_menu_": "Valmynd"
     },
     "en": {
       "geysir_caption_": "Caption",
@@ -78,7 +81,8 @@
       "geysir_info_": "Info",
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
-      "geysir_social_media_": "Social networks"
+      "geysir_social_media_": "Social networks",
+      "geysir_menu_": "Menu"
     },
     "es": {
       "geysir_caption_": "Título",
@@ -93,7 +97,8 @@
       "geysir_info_": "Info",
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
-      "geysir_social_media_": "Social networks"
+      "geysir_social_media_": "Social networks",
+      "geysir_menu_": "Menú"
     },
     "fr": {
       "geysir_caption_": "Titre",
@@ -108,7 +113,8 @@
       "geysir_info_": "Info",
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
-      "geysir_social_media_": "Social networks"
+      "geysir_social_media_": "Social networks",
+      "geysir_menu_": "Menu"
     },
     "hu": {
       "geysir_caption_": "Képaláírás",
@@ -123,7 +129,8 @@
       "geysir_info_": "Info",
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
-      "geysir_social_media_": "Social networks"
+      "geysir_social_media_": "Social networks",
+      "geysir_menu_": "Menu"
     },
     "it": {
       "geysir_caption_": "Didascalia",
@@ -138,7 +145,8 @@
       "geysir_info_": "Info",
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
-      "geysir_social_media_": "Social networks"
+      "geysir_social_media_": "Social networks",
+      "geysir_menu_": "Menu"
     },
     "nl": {
       "geysir_caption_": "Onderschrift",
@@ -153,7 +161,8 @@
       "geysir_info_": "Info",
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
-      "geysir_social_media_": "Social networks"
+      "geysir_social_media_": "Social networks",
+      "geysir_menu_": "Menu"
     },
     "no": {
       "geysir_caption_": "Bildetekst",
@@ -168,7 +177,8 @@
       "geysir_info_": "Info",
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
-      "geysir_social_media_": "Social networks"
+      "geysir_social_media_": "Social networks",
+      "geysir_menu_": "Menu"
     },
     "pl": {
       "geysir_caption_": "Podpis",
@@ -176,14 +186,15 @@
       "geysir_captured_": "Wykonano",
       "geysir_also_in_": "Ponadto",
       "geysir_comments_": "Komentarze",
-      "geysir_by_month_": "By month",
-      "geysir_by_year_": "By year",
+      "geysir_by_month_": "Według Miesiąca",
+      "geysir_by_year_": "Według Roku",
       "geysir_filter_": "Filter",
       "geysir_exif_": "Exif",
-      "geysir_info_": "Info",
-      "geysir_category_": "Category",
+      "geysir_info_": "Informacja",
+      "geysir_category_": "Kategoria",
       "geysir_scroll_down_": "Na dół",
-      "geysir_social_media_": "Social networks"
+      "geysir_social_media_": "Portale Społecznościowe",
+      "geysir_menu_": "Menu"
     },
 
     "ru": {
@@ -199,7 +210,8 @@
       "geysir_info_": "Info",
       "geysir_category_": "Category",
       "geysir_scroll_down": "Down",
-      "geysir_social_media_": "Social networks"
+      "geysir_social_media_": "Social networks",
+      "geysir_menu_": "Menu"
     },
     "sv": {
       "geysir_caption_": "Bildtext",
@@ -214,7 +226,8 @@
       "geysir_info_": "Info",
       "geysir_category_": "Category",
       "geysir_scroll_down": "Down",
-      "geysir_social_media_": "Social networks"
+      "geysir_social_media_": "Social networks",
+      "geysir_menu_": "Menu"
     }
   },
   "styles": {
@@ -359,7 +372,7 @@
         "grid_footer_hover_color": "rgb(0,0,0)",
 
         "tab_active_bg": "rgba(0,0,0,0.85)",
-        "tabs_color_active": "rgb(255,255,255)",
+        "tabs_color_active": "rgb(0,0,0)",
 
         "scrollbar_track_bg": "rgb(255,255,255)",
         "scrollbar_thumb_bg": "rgb(0,0,0)",
@@ -433,7 +446,7 @@
         "grid_footer_color": "rgb(255,255,255)",
         "grid_footer_hover_color": "rgb(255,255,255)",
 
-        "tab_active_bg": "rgba(255,255,255,0.85)",
+        "tab_active_bg": "rgba(0,0,0,0.85)",
         "tabs_color_active": "rgb(0,0,0)",
 
         "scrollbar_track_bg": "rgb(255,255,255)",
@@ -501,25 +514,6 @@
     "Index": {
       "icon": "layout",
       "settings": {
-        "index_layout": {
-          "note": "Choose a layout",
-          "note_align": "left",
-          "label": "Layout",
-          "type": "select",
-          "scope": ["front", "index"],
-          "options": [{
-            "label": "Slideshow only",
-            "value": "slideshow_only"
-          }, {
-            "label": "Sections only",
-            "value": "sections_only"
-          }, {
-            "label": "Slideshow & sections",
-            "value": "slideshow_sections"
-          }],
-          "reload_preview": true,
-          "value": "slideshow_sections"
-        },
         "slideshow_padding": {
           "label": "Slideshow padding",
           "type": "slider",
@@ -529,6 +523,13 @@
           "value": 0,
           "suffix": "px",
           "reload_preview": true
+        },
+        "front_slideshow": {
+          "label": "Show slideshow on frontpage",
+          "type": "boolean",
+          "control_first": true,
+          "value": "true",
+          "relead_preview": true
         },
         "slideshow_source": {
           "note": "Choose the source for the slideshow",
@@ -582,8 +583,22 @@
           "value": "true",
           "relead_preview": true
         },
+        "front_featured_albums": {
+          "label": "Show featured albums on frontpage",
+          "type": "boolean",
+          "control_first": true,
+          "value": "true",
+          "relead_preview": true
+        },
         "front_essays": {
           "label": "Show essays on frontpage",
+          "type": "boolean",
+          "control_first": true,
+          "value": "true",
+          "relead_preview": true
+        },
+        "front_featured_essays": {
+          "label": "Show featured essays on frontpage",
           "type": "boolean",
           "control_first": true,
           "value": "true",
@@ -934,12 +949,6 @@
           "value": 5,
           "reload_preview": true
         },
-        "menu_title": {
-          "label": "Menu title",
-          "type": "string",
-          "reload_preview": true,
-          "value": "Menu"
-        },
         "show_search": {
           "label": "Show koken search",
           "type": "boolean",
@@ -1094,6 +1103,13 @@
             "control_first": true,
             "reload_preview": true,
             "value": "#0000ff"
+          },
+          "spinner_bg_color": {
+            "label": "Spinner background color",
+            "type": "color",
+            "control_first": true,
+            "reload_preview": true,
+            "value": "#ffffff"
           }
         }
       }
@@ -1678,6 +1694,13 @@
           "scope": ["contents", "album", "albums", "tag", "tags", "category", "categories", "set", "essay", "essays", "page", "favorites", "timeline"],
           "value": "true"
         },
+        "show_content_count": {
+          "label": "Show content count",
+          "type": "boolean",
+          "control_first": true,
+          "scope": ["contents", "album"],
+          "value": "true"
+        },
         "show_breadcrumbs": {
           "label": "Breadcrumbs",
           "type": "boolean",
@@ -1843,7 +1866,7 @@
         "pillar_timeline_spacing": {
           "label": "Pillar spacing",
           "type": "slider",
-          "scope": ["timeline", "tag", "category"],
+          "scope": ["timeline", "tag", "category", "tags"],
           "min": 0,
           "max": 50,
           "step": 1,
@@ -1852,7 +1875,7 @@
         "pillar_columns_timeline_mob": {
           "label": "Pillar columns (Mobile)",
           "type": "slider",
-          "scope": ["timeline", "tag", "category"],
+          "scope": ["timeline", "tag", "category", "tags"],
           "min": 1,
           "max": 2,
           "step": 1,
@@ -1861,7 +1884,7 @@
         "pillar_columns_timeline_tablet": {
           "label": "Pillar columns (Tablet)",
           "type": "slider",
-          "scope": ["timeline", "tag", "category"],
+          "scope": ["timeline", "tag", "category", "tags"],
           "min": 1,
           "max": 8,
           "step": 1,
@@ -1870,7 +1893,7 @@
         "pillar_columns_timeline_max": {
           "label": "Pillar columns (Max)",
           "type": "slider",
-          "scope": ["timeline", "tag", "category"],
+          "scope": ["timeline", "tag", "category", "tags"],
           "min": 1,
           "max": 8,
           "step": 1,
@@ -1937,13 +1960,6 @@
             "with_alpha": true,
             "control_first": true,
             "scope": ["front", "index"],
-            "dependencies": {
-              "evaluate": "all",
-              "conditions": [{
-                "option": "index_layout",
-                "not": "slideshow_only"
-              }]
-            },
             "value": "rgba(255,255,255,.65)"
           },
           "content_bg": {
@@ -1952,13 +1968,6 @@
             "with_alpha": true,
             "control_first": true,
             "scope": ["front", "index"],
-            "dependencies": {
-              "evaluate": "all",
-              "conditions": [{
-                "option": "index_layout",
-                "not": "slideshow_only"
-              }]
-            },
             "value": "rgba(255,255,255,.65)"
           },
           "album_bg": {
@@ -1967,13 +1976,14 @@
             "with_alpha": true,
             "control_first": true,
             "scope": ["front", "index"],
-            "dependencies": {
-              "evaluate": "all",
-              "conditions": [{
-                "option": "index_layout",
-                "not": "slideshow_only"
-              }]
-            },
+            "value": "rgba(255,255,255,.65)"
+          },
+          "featured_album_bg": {
+            "label": "Featured Album Section Background",
+            "type": "color",
+            "with_alpha": true,
+            "control_first": true,
+            "scope": ["front", "index"],
             "value": "rgba(255,255,255,.65)"
           },
           "essay_bg": {
@@ -1982,13 +1992,14 @@
             "with_alpha": true,
             "control_first": true,
             "scope": ["front", "index"],
-            "dependencies": {
-              "evaluate": "all",
-              "conditions": [{
-                "option": "index_layout",
-                "not": "slideshow_only"
-              }]
-            },
+            "value": "rgba(255,255,255,.65)"
+          },
+          "featured_essay_bg": {
+            "label": "Featured Essay Section Background",
+            "type": "color",
+            "with_alpha": true,
+            "control_first": true,
+            "scope": ["front", "index"],
             "value": "rgba(255,255,255,.65)"
           }
         },

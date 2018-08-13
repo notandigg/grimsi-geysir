@@ -38,9 +38,8 @@
         <koken:if true="settings.show_context">
           <li>
             <koken:context>
-              <i class="fa fa-folder"></i>
               <koken:link>
-                {{ context.title }}
+                <i class="fa fa-th" aria-hidden="true"></i> {{ context.title }}
               </koken:link>
               <br>{{ context.position }} {{ language.of }} {{ context.total }}<br>
               <koken:else>
@@ -115,16 +114,22 @@
       <div class="tab-pane" id="exif-tab" role="tabpanel">
         <koken:exif>
           <koken:not empty="exif.model">
-            <div class="m-y-0">{{ exif.model }}</div>
+            <div class="m-y-0"><strong>Camera:</strong> {{ exif.model }}</div>
           </koken:not>
           <koken:not empty="exif.exposure">
-            <div class="m-y-0">{{ exif.exposure }}</div>
+            <div class="m-y-0"><strong>Exposure:</strong> {{ exif.exposure }}</div>
           </koken:not>
           <koken:not empty="exif.iso_speed_ratings">
-            <div class="m-y-0">ISO {{ exif.iso_speed_ratings.raw }}</div>
+            <div class="m-y-0"><strong>ISO:</strong> {{ exif.iso_speed_ratings.raw }}</div>
           </koken:not>
           <koken:not empty="exif.aperture">
-            <div class="m-y-0"><span class="fstop">f</span>/{{ exif.aperture.computed }}</div>
+            <div class="m-y-0"><span class="fstop"><strong>Aperture:</strong> f</span>/{{ exif.aperture.computed }}</div>
+          </koken:not>
+          <koken:not empty="exif.lens">
+            <div class="m-y-0"><strong>Lens:</strong> {{ exif.lens }}</div>
+          </koken:not>
+          <koken:not empty="exif.focal_length">
+            <div class="m-y-0"><strong>Focal Length:</strong> {{ exif.focal_length }}</div>
           </koken:not>
         </koken:exif>
       </div>

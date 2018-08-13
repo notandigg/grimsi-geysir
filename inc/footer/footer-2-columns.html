@@ -1,21 +1,21 @@
 <!-- TAGS -->
-<div class="col-xs-12 col-sm-6 text-xs-center">
+<div class="col-xs-12 col-md-3 text-xs-center">
+  <koken:load source="tags" limit="5">
     <h6 class="text-uppercase text-xs-center">{{ language.tags }}</h6>
-    <koken:load source="tags" limit="5">
-        <koken:loop separator=" ">
-            <koken:link class="btn btn-sm"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
-        </koken:loop>
-    </koken:load>
+    <koken:loop separator=" ">
+      <koken:link class="btn btn-sm"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
+    </koken:loop>
+  </koken:load>
 </div>
 <!-- //TAGS -->
 
 <!-- CATEGORIES -->
-<div class="col-xs-12 col-sm-6 text-xs-center">
+<div class="col-xs-12 col-md-3 text-xs-center">
+  <koken:load source="categories" limit="5">
     <h6 class="text-uppercase text-xs-center">{{ language.categories }}</h6>
-    <koken:load source="categories" limit="5">
-        <koken:loop separator=" ">
-            <koken:link class="btn btn-sm"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
-        </koken:loop>
-    </koken:load>
+    <koken:loop separator=" ">
+      <koken:link class="btn btn-sm"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
+    </koken:loop>
+  </koken:load>
 </div>
 <!-- //CATEGORIES -->
