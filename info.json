@@ -582,6 +582,13 @@
           "value": "true",
           "relead_preview": true
         },
+	"featured_front_albums": {
+          "label": "Show featured albums on frontpage",
+          "type": "boolean",
+          "control_first": true,
+          "value": "true",
+          "relead_preview": true
+        },
         "front_essays": {
           "label": "Show essays on frontpage",
           "type": "boolean",
