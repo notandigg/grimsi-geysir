@@ -6,6 +6,7 @@ A simple & clean Bootstrap 4 Koken theme for photographers, bloggers & much more
 <h6>Install Koken</h6>
 <i>Navigate to the themes folder (best via ftp):</i><br>
 www.yourdomain.*/storage/themes/<br>
+Copy all the whole folder so it will look like this: /storage/themes/grimsi-geysir/<br>
 Open a new browser window to login to your admin:<br>
 www.yourdomain.*/admin/#/site/themes/<br>
 Select 'grimsi-geysir' from the list of themes<br>
