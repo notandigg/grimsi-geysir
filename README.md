@@ -7,7 +7,7 @@ A simple & clean Bootstrap 4 Koken theme for photographers, bloggers & much more
 <i>Navigate to the themes folder (best via ftp):</i><br>
 www.yourdomain.*/storage/themes/<br>
 Copy the whole folder so it will look like this: /storage/themes/grimsi-geysir/<br>
-Open a new browser window to login to your admin:<br>
+Now head over to a browser and navigate to this location:<br>
 www.yourdomain.*/admin/#/site/themes/<br>
 Select 'grimsi-geysir' from the list of themes<br>
 Click the "Use theme" button to enable this theme<br>
