@@ -15,56 +15,46 @@
     </koken:if>
 
     <koken:if true="settings.show_content_download">
-    <koken:max_download>
-    <li class="nav-item">
-      <koken:link class="nav-link" role="tab" aria-controls="info" title="{{ language.download_image }}"><i class="fa fa-download" aria-hidden="true"></i></koken:link>
-    </li>
-    </koken:max_download>
+      <koken:max_download>
+        <li class="nav-item">
+          <koken:link class="nav-link" role="tab" aria-controls="info" title="{{ language.download_image }}"><i class="fa fa-download" aria-hidden="true"></i></koken:link>
+        </li>
+      </koken:max_download>
     </koken:if>
 
   </ul>
 
   <div class="tab-content">
+
     <div class="tab-pane active" id="info-tab" role="tabpanel">
-
       <ul>
-
-        <!-- Content title -->
-        <koken:if true="settings.show_content_title">
-          <li>{{ content.title | content.filename  }}</li>
-        </koken:if>
 
         <!-- Context -->
         <koken:if true="settings.show_context">
           <li>
             <koken:context>
-              <koken:link>
-                <i class="fa fa-th" aria-hidden="true"></i> {{ context.title }}
-              </koken:link>
-              <br>{{ context.position }} {{ language.of }} {{ context.total }}<br>
+              <koken:link><i class="fa fa-th" aria-hidden="true"></i> {{ context.title }}</koken:link>
+            <div>{{ context.position }} {{ language.of }} {{ context.total }}</div>
               <koken:else>
-                <i class="fa fa-file-image-o"></i>
-                <koken:link to="contents">{{ language.all_content }}</koken:link><br>
-                {{ context.position }} {{ language.of }} {{ context.total }}<br>
+                <koken:link to="contents"><i class="fa fa-file-image-o"></i> {{ language.all_content }}</koken:link>
+                <div>{{ context.position }} {{ language.of }} {{ context.total }}</div>
             </koken:context>
-            <br>
+
           </li>
         </koken:if>
 
         <!-- Captured date -->
         <koken:if true="settings.show_captured_date">
-        <i class="fa fa-clock-o"></i> <span class="text-uppercase">{{ language.geysir_captured_ }}</span> <br>
           <li>
-            {{ content.captured_on date_only="true" }}
+            <i class="fa fa-camera-retro"></i>
+              {{ content.captured_on date_format="dS M Y,  H:s" }}
           </li>
-          <br>
         </koken:if>
 
         <!-- Published date -->
         <koken:if true="settings.show_published_date">
-        <i class="fa fa-clock-o" aria-hidden="true"></i> <span class="text-uppercase">{{ language.geysir_uploaded_ }}</span><br>
           <li>
-            <koken:time relative="true" />
+          <i class="fa fa-upload" aria-hidden="true"></i> <koken:time relative="true" />
           </li>
           <br>
         </koken:if>
@@ -72,9 +62,8 @@
         <!-- Caption -->
         <koken:if true="settings.show_caption">
           <koken:not empty="content.caption">
-          <span class="text-uppercase">{{ language.geysir_caption_ }}</span><br>
             <li>
-               {{ content.caption }}
+              {{ content.caption }}
             </li>
             <br>
           </koken:not>
@@ -83,8 +72,6 @@
         <!-- Tags -->
         <koken:if true="settings.show_tags">
           <koken:tags>
-          <br>
-            <i class="fa fa-tags"></i> <span class="text-uppercase">{{ language.tags }}</span>
             <li>
               <koken:loop>
                 <koken:link class="btn btn-sm"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
@@ -97,7 +84,6 @@
         <!-- Categories -->
         <koken:if true="settings.show_categories">
           <koken:categories>
-          <i class="fa fa-bookmark"></i> <span class="text-uppercase">{{ language.categories }}</span><br>
             <li>
               <koken:loop>
                 <koken:link class="btn btn-sm"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
@@ -119,9 +105,6 @@
           <koken:not empty="exif.exposure">
             <div class="m-y-0"><strong>Exposure:</strong> {{ exif.exposure }}</div>
           </koken:not>
-          <koken:not empty="exif.iso_speed_ratings">
-            <div class="m-y-0"><strong>ISO:</strong> {{ exif.iso_speed_ratings.raw }}</div>
-          </koken:not>
           <koken:not empty="exif.aperture">
             <div class="m-y-0"><span class="fstop"><strong>Aperture:</strong> f</span>/{{ exif.aperture.computed }}</div>
           </koken:not>
@@ -130,6 +113,9 @@
           </koken:not>
           <koken:not empty="exif.focal_length">
             <div class="m-y-0"><strong>Focal Length:</strong> {{ exif.focal_length }}</div>
+          </koken:not>
+          <koken:not empty="exif.iso_speed_ratings">
+            <div class="m-y-0"><strong>ISO:</strong> {{ exif.iso_speed_ratings.raw }}</div>
           </koken:not>
         </koken:exif>
       </div>

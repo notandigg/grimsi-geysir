@@ -1,11 +1,11 @@
 <koken:event_essay>
 <div class="kgrid_item">
       <koken:if data="featured_image" equals="">
-        <koken:link> <img class="banner-photo" src="{{ location.theme_path }}/img/noimg.jpg" /> </koken:link>
+        <koken:link id="pjax-link"> <img class="banner-photo" src="{{ location.theme_path }}/img/noimg.jpg" /> </koken:link>
         <koken:else>
           <koken:featured_image>
             <koken:link>
-              <koken:img class="banner-photo" size="{{ settings.thumb_ratio_timeline }}" lazy="true" fade="true" />
+              <koken:img class="banner-photo" size="{{ settings.thumb_ratio_timeline }}" crop="true" lazy="true" fade="true" />
             </koken:link>
           </koken:featured_image>
       </koken:if>
@@ -13,7 +13,7 @@
 <koken:link to="essays"><span class="timeline_icon"><i class="fa fa-file-text-o" aria-hidden="true" title="{{ labels.essay.singular}}"></i></span></koken:link>
       <span class="hidden-sm-down timeline_time"> <i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
 
-      <koken:link>
+      <koken:link id="pjax-link">
         <h4 class="grid-footer">
           <div class="text-left text-truncate">{{ essay.title }}</div>
           <div class="hidden-sm-up"> <i class="fa fa-clock-o"></i>

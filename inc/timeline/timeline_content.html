@@ -1,13 +1,13 @@
 <koken:event_content>
 <div class="kgrid_item">
-      <koken:link>
+      <koken:link id="pjax-link">
         <koken:img class="banner-photo" size="{{ settings.thumb_ratio_timeline }}" crop="true" lazy="true" fade="true" />
       </koken:link>
 
       <koken:link to="contents"><span class="timeline_icon"><i class="fa fa-file-image-o" aria-hidden="true" title="{{ labels.content.singular }}"></i></span></koken:link>
       <span class="hidden-sm-down timeline_time"> <i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
 
-      <koken:link>
+      <koken:link id="pjax-link">
         <h4 class="grid-footer">
           <div class="text-truncate">{{ content.title | content.filename }}</div>
           <div class="hidden-sm-up"> <i class="fa fa-clock-o"></i>

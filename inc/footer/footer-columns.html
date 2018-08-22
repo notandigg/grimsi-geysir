@@ -1,4 +1,5 @@
 <!-- TAGS -->
+<koken:if true="settings.footer_tags">
 <div class="col-xs-12 col-md-3 text-xs-center">
   <koken:load source="tags" limit="5">
     <h6 class="text-uppercase text-xs-center">{{ language.tags }}</h6>
@@ -7,9 +8,11 @@
     </koken:loop>
   </koken:load>
 </div>
+</koken:if>
 <!-- //TAGS -->
 
 <!-- CATEGORIES -->
+<koken:if true="settings.footer_categories">
 <div class="col-xs-12 col-md-3 text-xs-center">
   <koken:load source="categories" limit="5">
     <h6 class="text-uppercase text-xs-center">{{ language.categories }}</h6>
@@ -18,4 +21,20 @@
     </koken:loop>
   </koken:load>
 </div>
+</koken:if>
 <!-- //CATEGORIES -->
+
+<!-- Recent essays -->
+<koken:if true="settings.footer_essay_list">
+<div class="col-xs-12 col-md-6 text-xs-center">
+  <koken:load source="essays" limit="{{ settings.footer_essay_list_count }}">
+    <h6 class="text-uppercase text-xs-center">{{ language.recent_essays }}</h6>
+    <koken:loop separator="">
+      <div class="text-xs-center footer_essay_list">
+        <koken:link id="pjax-link">{{ essay.title }}<br /><span><i class="fa fa-clock-o"></i> <koken:time relative="true" /></span></koken:link>
+      </div>
+    </koken:loop>
+  </koken:load>
+</div>
+</koken:if>
+<!-- //Recent essays -->

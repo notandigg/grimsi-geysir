@@ -4,8 +4,8 @@
   <div id="kgrid_favorites">
     <koken:loop>
       <div class="kgrid_item">
-        <koken:link lightbox="{{ settings.use_lightbox }}" title="{{ content.title | content.filename }}">
-          <koken:img class="banner-photo" lazy="true" fade="true" size="3:2" />
+        <koken:link lightbox="{{ settings.use_lightbox }}" title="{{ content.title | content.filename }}" id="pjax-link">
+          <koken:img class="banner-photo" lazy="true" fade="true" crop="true" size="{{ settings.thumb_ratio_front }}" />
         </koken:link>
       </div>
     </koken:loop>

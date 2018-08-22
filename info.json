@@ -1,6 +1,6 @@
 {
   "name": "Geysir",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Free Bootstrap4 theme for Koken, with Pjax, Nprogress (for smoother/faster content and essay browsing) & Koken search compatible. And now also supports languages",
   "demo": "http://grimur.net",
   "author": {
@@ -34,7 +34,8 @@
       "geysir_category_": "Flokkur",
       "geysir_scroll_down_": "Niður",
       "geysir_social_media_": "Samfélagsmiðlar",
-      "geysir_menu_": "Valmynd"
+      "geysir_menu_": "Valmynd",
+      "geysir_filename_": "Skráarnafn"
     },
     "de": {
       "geysir_caption_": "Beschreibung",
@@ -50,7 +51,8 @@
       "geysir_category_": "Kategorie",
       "geysir_scroll_down_": "Runter",
       "geysir_social_media_": "Soziale Medien",
-      "geysir_menu_": "Menü"
+      "geysir_menu_": "Menü",
+      "geysir_filename_": "Filename"
     },
     "el": {
       "geysir_caption_": "Λεζάντα",
@@ -66,7 +68,8 @@
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
       "geysir_social_media_": "Social networks",
-      "geysir_menu_": "Valmynd"
+      "geysir_menu_": "Valmynd",
+      "geysir_filename_": "Filename"
     },
     "en": {
       "geysir_caption_": "Caption",
@@ -82,7 +85,8 @@
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
       "geysir_social_media_": "Social networks",
-      "geysir_menu_": "Menu"
+      "geysir_menu_": "Menu",
+      "geysir_filename_": "Filenmame"
     },
     "es": {
       "geysir_caption_": "Título",
@@ -98,7 +102,8 @@
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
       "geysir_social_media_": "Social networks",
-      "geysir_menu_": "Menú"
+      "geysir_menu_": "Menú",
+      "geysir_filename_": "Filename"
     },
     "fr": {
       "geysir_caption_": "Titre",
@@ -114,7 +119,8 @@
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
       "geysir_social_media_": "Social networks",
-      "geysir_menu_": "Menu"
+      "geysir_menu_": "Menu",
+      "geysir_filename_": "Filename"
     },
     "hu": {
       "geysir_caption_": "Képaláírás",
@@ -130,7 +136,8 @@
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
       "geysir_social_media_": "Social networks",
-      "geysir_menu_": "Menu"
+      "geysir_menu_": "Menu",
+      "geysir_filename_": "Filename"
     },
     "it": {
       "geysir_caption_": "Didascalia",
@@ -146,7 +153,8 @@
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
       "geysir_social_media_": "Social networks",
-      "geysir_menu_": "Menu"
+      "geysir_menu_": "Menu",
+      "geysir_filename_": "Filename"
     },
     "nl": {
       "geysir_caption_": "Onderschrift",
@@ -162,7 +170,8 @@
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
       "geysir_social_media_": "Social networks",
-      "geysir_menu_": "Menu"
+      "geysir_menu_": "Menu",
+      "geysir_filename_": "Filename"
     },
     "no": {
       "geysir_caption_": "Bildetekst",
@@ -178,7 +187,8 @@
       "geysir_category_": "Category",
       "geysir_scroll_down_": "Down",
       "geysir_social_media_": "Social networks",
-      "geysir_menu_": "Menu"
+      "geysir_menu_": "Menu",
+      "geysir_filename_": "Filename"
     },
     "pl": {
       "geysir_caption_": "Podpis",
@@ -194,7 +204,8 @@
       "geysir_category_": "Kategoria",
       "geysir_scroll_down_": "Na dół",
       "geysir_social_media_": "Portale Społecznościowe",
-      "geysir_menu_": "Menu"
+      "geysir_menu_": "Menu",
+      "geysir_filename_": "Filename"
     },
 
     "ru": {
@@ -211,7 +222,8 @@
       "geysir_category_": "Category",
       "geysir_scroll_down": "Down",
       "geysir_social_media_": "Social networks",
-      "geysir_menu_": "Menu"
+      "geysir_menu_": "Menu",
+      "geysir_filename_": "Filename"
     },
     "sv": {
       "geysir_caption_": "Bildtext",
@@ -227,7 +239,8 @@
       "geysir_category_": "Category",
       "geysir_scroll_down": "Down",
       "geysir_social_media_": "Social networks",
-      "geysir_menu_": "Menu"
+      "geysir_menu_": "Menu",
+      "geysir_filename_": "Filename"
     }
   },
   "styles": {
@@ -514,21 +527,34 @@
     "Index": {
       "icon": "layout",
       "settings": {
-        "slideshow_padding": {
-          "label": "Slideshow padding",
-          "type": "slider",
-          "min": 0,
-          "max": 100,
-          "step": 0.10,
-          "value": 0,
-          "suffix": "px",
-          "reload_preview": true
+        "thumb_ratio_front": {
+          "label": "Aspect ratio for all thumbs",
+          "type": "select",
+          "options": [{
+            "label": "1:1",
+            "value": "1:1"
+          }, {
+            "label": "2:1",
+            "value": "2:1"
+          }, {
+            "label": "3:2",
+            "value": "3:2"
+          }, {
+            "label": "4:3",
+            "value": "4:3"
+          }, {
+            "label": "16:9",
+            "value": "16:9"
+          }],
+          "value": "1:1",
+          "scope": ["index"]
         },
         "front_slideshow": {
           "label": "Show slideshow on frontpage",
           "type": "boolean",
           "control_first": true,
           "value": "true",
+          "scope": ["index"],
           "relead_preview": true
         },
         "slideshow_source": {
@@ -536,7 +562,7 @@
           "note_align": "left",
           "label": "Slideshow Source",
           "type": "select",
-          "scope": ["front", "index"],
+          "scope": ["index"],
           "options": [{
             "label": "Favorites",
             "value": "favorites"
@@ -560,48 +586,78 @@
               "not": "sections_only"
             }]
           },
+          "scope": ["index"],
           "value": "contents"
         },
-        "front_content": {
-          "label": "Show content on frontpage",
+        "slideshow_padding": {
+          "note": "Add padding to top and bottom of slideshow",
+          "note_align": "left",
+          "label": "Slideshow padding",
+          "type": "slider",
+          "min": 0,
+          "max": 200,
+          "step": 10,
+          "value": 0,
+          "suffix": "px",
+          "scope": ["index"],
+          "reload_preview": true
+        },
+        "show_scroll_down_button": {
+          "note": "Show or hide the scroll down button",
+          "note_align": "left",
+          "label": "Show scroll down button",
           "type": "boolean",
           "control_first": true,
           "value": "true",
+          "scope": ["index"],
+          "relead_preview": true
+        },
+        "front_content": {
+          "label": "Show content section on frontpage",
+          "type": "boolean",
+          "control_first": true,
+          "value": "true",
+          "scope": ["index"],
           "relead_preview": true
         },
         "front_fav": {
-          "label": "Show favorites on frontpage",
+          "label": "Show favorites section on frontpage",
           "type": "boolean",
           "control_first": true,
           "value": "true",
+          "scope": ["index"],
           "relead_preview": true
         },
         "front_albums": {
-          "label": "Show albums on frontpage",
+          "label": "Show albums section on frontpage",
           "type": "boolean",
           "control_first": true,
           "value": "true",
+          "scope": ["index"],
           "relead_preview": true
         },
         "front_featured_albums": {
-          "label": "Show featured albums on frontpage",
+          "label": "Show featured albums section on frontpage",
           "type": "boolean",
           "control_first": true,
           "value": "true",
+          "scope": ["index"],
           "relead_preview": true
         },
         "front_essays": {
-          "label": "Show essays on frontpage",
+          "label": "Show essays section on frontpage",
           "type": "boolean",
           "control_first": true,
           "value": "true",
+          "scope": ["index"],
           "relead_preview": true
         },
         "front_featured_essays": {
-          "label": "Show featured essays on frontpage",
+          "label": "Show featured essays section on frontpage",
           "type": "boolean",
           "control_first": true,
           "value": "true",
+          "scope": ["index"],
           "relead_preview": true
         }
       }
@@ -910,8 +966,15 @@
             "control_first": true,
             "value": "rgba(255,255,255,1)"
           },
-          "logo_text_shadow_color": {
+          "logo_textshadow_color": {
             "label": "Text shadow Color",
+            "type": "color",
+            "with_alpha": true,
+            "control_first": true,
+            "value": "rgba(0,0,0,1)"
+          },
+          "logo_boxshadow_color": {
+            "label": "Logo box shadow",
             "type": "color",
             "with_alpha": true,
             "control_first": true,
@@ -1118,7 +1181,7 @@
       "icon": "plugin",
       "settings": {
         "show_disqus": {
-          "note": "Need the disqus plugin",
+          "note": "You need the disqus plugin to add the comment section",
           "note_align": "left",
           "label": "Show disqus plugin",
           "type": "boolean",
@@ -1132,12 +1195,6 @@
     "Footer": {
       "icon": "layout",
       "settings": {
-        "show_footer": {
-          "label": "Show footer",
-          "type": "boolean",
-          "control_first": true,
-          "value": true
-        },
         "footer_header_border_width": {
           "label": "Header border height",
           "type": "slider",
@@ -1168,96 +1225,6 @@
             }]
           },
           "value": 25,
-          "reload_preview": true
-        },
-        "show_copyright": {
-          "label": "Show copyright",
-          "type": "boolean",
-          "control_first": true,
-          "dependencies": {
-            "evaluate": "all",
-            "conditions": [{
-              "option": "show_footer",
-              "not": "false"
-            }]
-          },
-          "value": true
-        },
-        "show_powered_by": {
-          "label": "Show powered by",
-          "type": "boolean",
-          "control_first": true,
-          "dependencies": {
-            "evaluate": "all",
-            "conditions": [{
-              "option": "show_footer",
-              "not": "false"
-            }]
-          },
-          "value": true
-        },
-        "show_designed_by": {
-          "label": "Show credits",
-          "type": "boolean",
-          "control_first": true,
-          "dependencies": {
-            "evaluate": "all",
-            "conditions": [{
-              "option": "show_footer",
-              "not": "false"
-            }]
-          },
-          "value": true
-        },
-        "show_social_buttons": {
-          "label": "Show social buttons",
-          "type": "boolean",
-          "control_first": true,
-          "value": true,
-          "dependencies": {
-            "evaluate": "all",
-            "conditions": [{
-              "option": "show_footer",
-              "not": "false"
-            }]
-          }
-        },
-        "footer_columns": {
-          "label": "Footer Columns",
-          "type": "select",
-          "dependencies": {
-            "evaluate": "all",
-            "conditions": [{
-              "option": "show_footer",
-              "not": "false"
-            }]
-          },
-          "options": [{
-            "label": "No Columns",
-            "value": "footer-0-columns"
-          }, {
-            "label": "2 Columns",
-            "value": "footer-2-columns"
-          }, {
-            "label": "3 Columns",
-            "value": "footer-3-columns"
-          }],
-          "value": "footer-3-columns"
-        },
-        "footer_essay_list_count": {
-          "label": "Essay footer count",
-          "type": "slider",
-          "min": 1,
-          "max": 20,
-          "step": 1,
-          "dependencies": {
-            "evaluate": "all",
-            "conditions": [{
-              "option": "show_footer",
-              "not": "false"
-            }]
-          },
-          "value": 8,
           "reload_preview": true
         }
       }
@@ -1353,7 +1320,8 @@
           "value": false,
           "control_first": true,
           "reload_preview": true,
-          "scope": ["contents", "index", "favorites", "tags", "tag", "album"]
+          "scope": ["contents", "index", "favorites", "tags", "tag", "album"],
+          "scoped_values": true
         },
         "img_scale_content": {
           "label": "Scale",
@@ -1367,7 +1335,7 @@
           }],
           "value": "normal",
           "reload_preview": "true",
-          "scope": ["contents", "set", "album"]
+          "scope": ["contents", "favorites", "tags", "tag", "album"]
         },
         "thumb_ratio_content": {
           "label": "Aspect ratio",
@@ -1396,13 +1364,13 @@
               "not": "normal"
             }]
           },
-          "scope": ["contents", "set", "album"],
+          "scope": ["contents", "index", "favorites", "tags", "tag", "album"],
           "scoped_values": true
         },
         "pillar_spacing": {
           "label": "Pillar spacing",
           "type": "slider",
-          "scope": ["contents", "set", "album"],
+          "scope": ["contents", "favorites", "tags", "tag", "album"],
           "scoped_values": true,
           "min": 0,
           "max": 50,
@@ -1412,7 +1380,7 @@
         "pillar_columns_mob": {
           "label": "Pillar (Mobile)",
           "type": "slider",
-          "scope": ["contents", "set", "album"],
+          "scope": ["contents", "favorites", "tags", "tag", "album"],
           "scoped_values": true,
           "min": 1,
           "max": 8,
@@ -1422,7 +1390,7 @@
         "pillar_columns_tablet": {
           "label": "Pillar (Tablet)",
           "type": "slider",
-          "scope": ["contents", "set", "album"],
+          "scope": ["contents", "favorites", "tags", "tag", "album"],
           "scoped_values": true,
           "min": 1,
           "max": 8,
@@ -1432,49 +1400,8 @@
         "pillar_columns_max": {
           "label": "Pillar (Desktop)",
           "type": "slider",
-          "scope": ["contents", "set", "album"],
+          "scope": ["contents", "favorites", "tags", "tag", "album"],
           "scoped_values": true,
-          "min": 1,
-          "max": 8,
-          "step": 1,
-          "value": 4
-        }
-      }
-    },
-    "Favorites": {
-      "icon": "layout",
-      "settings": {
-        "pillar_spacing_fav": {
-          "label": "Pillar spacing",
-          "type": "slider",
-          "scope": ["favorites"],
-          "min": 0,
-          "max": 50,
-          "step": 1,
-          "value": 20
-        },
-        "pillar_columns_mob_fav": {
-          "label": "Pillar (Mobile)",
-          "type": "slider",
-          "scope": ["favorites"],
-          "min": 1,
-          "max": 8,
-          "step": 1,
-          "value": 2
-        },
-        "pillar_columns_tablet_fav": {
-          "label": "Pillar (Tablet)",
-          "type": "slider",
-          "scope": ["favorites"],
-          "min": 1,
-          "max": 8,
-          "step": 1,
-          "value": 3
-        },
-        "pillar_columns_max_fav": {
-          "label": "Pillar (Desktop)",
-          "type": "slider",
-          "scope": ["favorites"],
           "min": 1,
           "max": 8,
           "step": 1,
@@ -1492,7 +1419,7 @@
           "max": 24,
           "step": 1,
           "value": 24,
-          "scope": ["albums", "sets"],
+          "scope": ["albums", "set"],
           "reload_preview": true
         },
         "img_scale_album": {
@@ -1506,10 +1433,11 @@
             "value": "uniform"
           }],
           "value": "uniform",
-          "reload_preview": "true",
-          "scope": ["sets", "albums", "set"]
+          "scope": ["albums", "set"],
+          "reload_preview": "true"
+
         },
-        "thumb_ratio_album": {
+        "img_ratio_album": {
           "label": "Aspect ratio",
           "type": "select",
           "options": [{
@@ -1536,12 +1464,12 @@
               "not": "normal"
             }]
           },
-          "scope": ["set", "albums"]
+          "scope": ["albums", "set"]
         },
         "pillar_album_spacing": {
           "label": "Pillar spacing",
           "type": "slider",
-          "scope": ["set", "albums"],
+          "scope": ["albums", "set"],
           "min": 0,
           "max": 50,
           "step": 1,
@@ -1550,7 +1478,7 @@
         "pillar_columns_album_mob": {
           "label": "Pillar columns (Mobile)",
           "type": "slider",
-          "scope": ["set", "albums"],
+          "scope": ["albums", "set"],
           "min": 1,
           "max": 2,
           "step": 1,
@@ -1559,7 +1487,7 @@
         "pillar_columns_album_tablet": {
           "label": "Pillar columns (Tablet)",
           "type": "slider",
-          "scope": ["set", "albums"],
+          "scope": ["albums", "set"],
           "min": 1,
           "max": 8,
           "step": 1,
@@ -1568,7 +1496,7 @@
         "pillar_columns_album_max": {
           "label": "Pillar columns (Max)",
           "type": "slider",
-          "scope": ["set", "albums"],
+          "scope": ["albums", "set"],
           "min": 1,
           "max": 8,
           "step": 1,
@@ -1828,6 +1756,123 @@
           "scope": ["album", "set"],
           "control_first": true,
           "value": true
+        },
+        "show_footer": {
+          "label": "Show footer",
+          "type": "boolean",
+          "control_first": true,
+          "value": true
+        },
+        "footer_tags": {
+          "label": "List tags in footer",
+          "type": "boolean",
+          "control_first": true,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [{
+              "option": "show_footer",
+              "not": "false"
+            }]
+          },
+          "value": true
+        },
+        "footer_categories": {
+          "label": "List categories in footer",
+          "type": "boolean",
+          "control_first": true,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [{
+              "option": "show_footer",
+              "not": "false"
+            }]
+          },
+          "value": true
+        },
+        "footer_essay_list": {
+          "label": "List essays in footer",
+          "type": "boolean",
+          "control_first": true,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [{
+              "option": "show_footer",
+              "not": "false"
+            }]
+          },
+          "value": true
+        },
+        "footer_essay_list_count": {
+          "label": "Essay footer count",
+          "type": "slider",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [            {
+              "option": "show_footer",
+              "equals": true
+            },
+            {
+              "option": "footer_essay_list",
+              "equals": true
+            }]
+          },
+          "value": 8,
+          "reload_preview": true
+        },
+        "show_copyright": {
+          "label": "Show copyright",
+          "type": "boolean",
+          "control_first": true,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [{
+              "option": "show_footer",
+              "not": "false"
+            }]
+          },
+          "value": true
+        },
+        "show_powered_by": {
+          "label": "Show powered by",
+          "type": "boolean",
+          "control_first": true,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [{
+              "option": "show_footer",
+              "not": "false"
+            }]
+          },
+          "value": true
+        },
+        "show_designed_by": {
+          "label": "Show credits",
+          "type": "boolean",
+          "control_first": true,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [{
+              "option": "show_footer",
+              "not": "false"
+            }]
+          },
+          "value": true
+        },
+        "show_social_buttons": {
+          "label": "Show social buttons",
+          "type": "boolean",
+          "control_first": true,
+          "value": true,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [{
+              "option": "show_footer",
+              "not": "false"
+            }]
+          }
         }
       }
     },
@@ -1861,7 +1906,7 @@
               "not": "normal"
             }]
           },
-          "scope": ["timeline", "tag", "category"]
+          "scope": ["tag", "category", "timeline"]
         },
         "pillar_timeline_spacing": {
           "label": "Pillar spacing",
@@ -1917,6 +1962,24 @@
             "type": "color",
             "control_first": true,
             "value": "rgba(0,0,0,0)"
+          },
+          "essay_content_bg": {
+            "label": "Essay content background",
+            "type": "color",
+            "with_alpha": true,
+            "control_first": true,
+            "scope": ["essay"],
+            "value": "rgba(238,238,238,1)"
+          }
+        },
+        "Essay": {
+          "essay_content_bg": {
+            "label": "Essay content background",
+            "type": "color",
+            "with_alpha": true,
+            "control_first": true,
+            "scope": ["essay"],
+            "value": "rgba(238,238,238,.5)"
           }
         },
         "Overlay colors": {
@@ -1926,7 +1989,7 @@
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "scope": ["index", "front", "albums", "tag", "category", "essays", "timeline"],
+            "scope": ["index", "albums", "tag", "category", "essays", "timeline"],
             "value": "rgba(255,255,255,.65)"
           },
           "grid_footer_hover_bg": {
@@ -1934,21 +1997,21 @@
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "scope": ["index", "front", "albums", "tag", "category", "essays", "timeline"],
+            "scope": ["index", "albums", "tag", "category", "essays", "timeline"],
             "value": "rgba(255,255,255,.65)"
           },
           "grid_footer_color": {
             "label": "Title text color",
             "type": "color",
             "control_first": true,
-            "scope": ["index", "front", "albums", "tag", "category", "essays", "timeline"],
+            "scope": ["index", "albums", "tag", "category", "essays", "timeline"],
             "value": "rgb(255,255,255)"
           },
           "grid_footer_hover_color": {
             "label": "Title text hover color",
             "type": "color",
             "control_first": true,
-            "scope": ["index", "front", "albums", "tag", "category", "essays", "timeline"],
+            "scope": ["index", "albums", "tag", "category", "essays", "timeline"],
             "value": "rgb(255,255,255)"
           }
         },
@@ -1959,7 +2022,7 @@
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "scope": ["front", "index"],
+            "scope": ["index"],
             "value": "rgba(255,255,255,.65)"
           },
           "content_bg": {
@@ -1967,7 +2030,7 @@
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "scope": ["front", "index"],
+            "scope": ["index"],
             "value": "rgba(255,255,255,.65)"
           },
           "album_bg": {
@@ -1975,7 +2038,7 @@
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "scope": ["front", "index"],
+            "scope": ["index"],
             "value": "rgba(255,255,255,.65)"
           },
           "featured_album_bg": {
@@ -1983,7 +2046,7 @@
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "scope": ["front", "index"],
+            "scope": ["index"],
             "value": "rgba(255,255,255,.65)"
           },
           "essay_bg": {
@@ -1991,7 +2054,7 @@
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "scope": ["front", "index"],
+            "scope": ["index"],
             "value": "rgba(255,255,255,.65)"
           },
           "featured_essay_bg": {
@@ -1999,7 +2062,7 @@
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "scope": ["front", "index"],
+            "scope": ["index"],
             "value": "rgba(255,255,255,.65)"
           }
         },
@@ -2107,16 +2170,16 @@
         },
         "Tabbed links": {
           "collapse": true,
-          "tab_active_bg": {
-            "label": "Active tab background",
+          "tab_active_border": {
+            "label": "Active tab border color",
             "type": "color",
             "with_alpha": true,
             "control_first": true,
             "scope": ["content"],
             "value": "rgba(101,101,230,0.85)"
           },
-          "tabs_color_active": {
-            "label": "Active tab color",
+          "tab_active_color": {
+            "label": "Active tab text color",
             "type": "color",
             "control_first": true,
             "scope": ["content"],

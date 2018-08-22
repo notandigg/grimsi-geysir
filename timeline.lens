@@ -21,13 +21,13 @@
       </div>
     </koken:if>
 
-<koken:if data="location.here" equals="/timeline/">
+<koken:if data="location.here" equals="timeline">
 <koken:if true="settings.show_header">
 <h4 class="text-title">{{ language.timeline }}</h4>
 </koken:if>
 <koken:else>
     <koken:if true="{{ settings.show_breadcrumbs }}">
-      <h4 class="text-title"><koken:breadcrumbs separator="/" show_home="false" link_current="false" /> </h4>
+      <h4 class="text-title"><koken:breadcrumbs separator="/" show_home="false" link_current="true" /> </h4>
     </koken:if>
 </koken:if>
 </div>

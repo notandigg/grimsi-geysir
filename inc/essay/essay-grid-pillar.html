@@ -5,7 +5,7 @@
   <div id="kgrid_essay">
     <koken:loop>
       <div class="kgrid_item">
-        <koken:link title="{{ essay.title }}">
+        <koken:link title="{{ essay.title }}" id="pjax-link">
           <span class="hidden-sm-down timeline_time"> <i class="fa fa-clock-o"></i> <koken:time relative="true" /></span>
           <koken:if data="featured_image" equals="">
             <img class="banner-photo" src="{{ location.theme_path }}/img/noimg.jpg" />

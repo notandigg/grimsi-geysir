@@ -5,7 +5,7 @@
   <div id="kgrid_content">
     <koken:loop>
       <div class="kgrid_item">
-        <koken:link lightbox="{{ settings.use_lightbox }}" title="{{ content.title | content.filename }}">
+        <koken:link lightbox="{{ settings.use_lightbox }}" title="{{ content.title | content.filename }}" id="pjax-link">
           <koken:if data="{{ settings.img_scale_content }}" equals="uniform">
             <koken:img lazy="true" fade="true" size="{{ settings.thumb_ratio_content }}" />
           </koken:if>

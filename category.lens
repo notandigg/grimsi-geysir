@@ -2,7 +2,7 @@
 <koken:include file="inc/nav.html" />
 <koken:load limit="30" infinite="true">
     <div id="top">
-        <div class="container-fluid fadeIn">
+        <div class="container-fluid">
             <div class="col-lg-12 text-xs-center">
 
                 <koken:if true="settings.show_header">

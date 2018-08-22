@@ -39,18 +39,15 @@
 
 <koken:include file="inc/essay/essay-nav.html" />
 
-      <koken:featured_image>
-          <koken:img class="timeline-photo img-rounded" lazy="true" />
-        <hr />
-      </koken:featured_image>
+<koken:featured_image>
+    <koken:img class="timeline-photo img-rounded m-b-2" lazy="true" />
+</koken:featured_image>
 
-      <div class="col-md-8" style="margin-bottom:10px;">
-
-        <p>{{ essay.content paragraph="true" }}</p>
-
+      <div class="col-md-8">
+        <div class="essay_content">{{ essay.content paragraph="true" }}</div>
       </div>
 
-      <div class="col-md-4" style="margin-bottom:10px;">
+      <div class="col-md-4">
         <koken:include file="inc/essay/essay-sidebar.html" />
       </div>
 

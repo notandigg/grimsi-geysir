@@ -30,6 +30,14 @@
     <div class="container">
         <koken:include file="inc/content/content-nav.html" />
         <div class="col-md-9 col-xs-12 text-xs-center" id="content-container">
+
+        <!-- Content title -->
+        <koken:if true="settings.show_content_title">
+        <div class="text-xs-center">
+            <h4 class="text-title m-t-0">{{ content.title | content.filename  }}</h4>
+        </div>
+        </koken:if>
+
           <koken:content_image>
           <koken:link lightbox="true">
             <koken:img class="img-rounded text-xs-center m-y-1 m-x-auto" id="content-sizing" lazy="true" fade="true" />
@@ -37,7 +45,7 @@
           </koken:content_image>
           <koken:content_video>
             <!-- We have a video -->
-            <koken:video class="img-fluid" />
+            <koken:video class="img-fluid img-rounded" />
           </koken:content_video>
         </div>
         <div class="col-md-3 col-xs-12" style="margin-bottom:15px;">

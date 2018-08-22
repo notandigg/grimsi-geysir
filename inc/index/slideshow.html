@@ -1,0 +1,24 @@
+<div id="slideshow">
+  <koken:pulse jsvar="pulse" crop="fill" loop="true" autostart="true" random="true" source="{{ settings.slideshow_source }}" height="100%" width="100%" />
+</div>
+
+<koken:if true="{{ settings.show_scroll_down_button }}"> <a href="#content" class="btn navbar-toggle collapsed pull-right m-y-0 button_down smooth scroll_me" id="down-button" data-bind-to-key="down" data-wow-delay="1s">{{ language.geysir_scroll_down_ }}<br>
+  <i class="fa fa-angle-down fa-2x"></i></a>
+</koken:if>
+
+<div class="spinner" style="display:none;"></div>
+<script>
+  pulse.on('start', function() {
+    $('.spinner').show();
+  });
+  pulse.on('waiting', function(e) {
+    if (e) {
+      $('.spinner').show();
+    } else {
+      $('.spinner').hide();
+    }
+  });
+  pulse.on('dataloaded', function() {
+    $('.spinner').hide();
+  });
+</script>

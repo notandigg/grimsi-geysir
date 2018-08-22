@@ -3,7 +3,7 @@
   <footer id="footer">
     <div class="container">
       <div class="row">
-        <koken:include file="inc/footer/{{ settings.footer_columns }}.html" />
+        <koken:include file="inc/footer/footer-columns.html" />
         <!-- COPYRIGHT -->
         <div class="col-xs-12 text-xs-center p-y-3">
           <koken:if true="settings.show_copyright"> <span>{{ site.copyright }}</span></koken:if>
@@ -22,11 +22,16 @@
                               <i class="fa fa-twitter"></i>
                             </a>
                           </koken:profile_twitter>
+
                           <koken:profile_facebook>
                             <a href="{{ profile.facebook }}">
                               <i class="fa fa-facebook"></i>
                             </a>
                           </koken:profile_facebook>
+
+                            <a href="{{ profile.google_plus }}">
+                              <i class="fa fa-google-plus"></i>
+                            </a>
             </h2>
           </koken:if>
         </div>
@@ -42,7 +47,8 @@
 </koken:if>
 
 <koken:asset file="jquery.pjax.js" common="true" />
-<koken:asset file="nprogress.js" common="true" />
+<!--<koken:asset file="nprogress.js" common="true" />-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
 <koken:asset file="js/tether.min.js" async />
 <koken:asset file="js/bootstrap.min.js" async />
 
