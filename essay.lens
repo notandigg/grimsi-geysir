@@ -39,10 +39,6 @@
 
 <koken:include file="inc/essay/essay-nav.html" />
 
-<koken:featured_image>
-    <koken:img class="timeline-photo img-rounded m-b-2" lazy="true" />
-</koken:featured_image>
-
       <div class="col-md-8">
         <div class="essay_content">{{ essay.content paragraph="true" }}</div>
       </div>

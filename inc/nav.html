@@ -1,6 +1,6 @@
 <!-- LOGO -->
 <koken:if data="settings.site_title_type" equals="image">
-  <koken:link to="front" class="site-logo" title="{{ language.go }} {{ language.home }}" style="background-color:transparent;"><img src="{{ settings.img_path }}" /></koken:link>
+  <koken:link to="front" class="site-logo-img" title="{{ language.go }} {{ language.home }}"><img src="{{ location.theme_path }}/img/{{ settings.img_path }}" /></koken:link>
 </koken:if>
 <koken:if data="settings.site_title_type" equals="text">
   <koken:link to="front">

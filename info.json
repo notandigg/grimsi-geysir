@@ -942,11 +942,38 @@
           }],
           "value": "absolute"
         },
+        "site_logo_border_radius": {
+          "label": "Logo border radius",
+          "type": "slider",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "value": 7,
+          "suffix": "px",
+          "reload_preview": true,
+          "dependencies": {
+            "evaluate": "all",
+            "conditions": [{
+              "option": "site_title_type",
+              "equals": "text"
+            }]
+          }
+        },
+        "site_logo_margin": {
+          "label": "Logo margin",
+          "type": "slider",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "value": 7,
+          "suffix": "px",
+          "reload_preview": true
+        },
         "img_path": {
           "label": "image path",
           "type": "string",
-          "value": "",
-          "note": "add full path with http://",
+          "value": "logo.png",
+          "note": "Add name of logo e.g. logo.png",
           "note_align": "left",
           "reload_preview": true,
           "dependencies": {
@@ -964,28 +991,56 @@
             "type": "color",
             "with_alpha": "true",
             "control_first": true,
-            "value": "rgba(255,255,255,1)"
+            "value": "rgba(255,255,255,1)",
+            "dependencies": {
+              "evaluate": "all",
+              "conditions": [{
+                "option": "site_title_type",
+                "equals": "text"
+              }]
+            }
           },
           "logo_textshadow_color": {
             "label": "Text shadow Color",
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "value": "rgba(0,0,0,1)"
+            "value": "rgba(0,0,0,1)",
+            "dependencies": {
+              "evaluate": "all",
+              "conditions": [{
+                "option": "site_title_type",
+                "equals": "text"
+              }]
+            }
           },
           "logo_boxshadow_color": {
             "label": "Logo box shadow",
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "value": "rgba(0,0,0,1)"
+            "value": "rgba(0,0,0,1)",
+            "dependencies": {
+              "evaluate": "all",
+              "conditions": [{
+                "option": "site_title_type",
+                "equals": "text"
+              }]
+            }
           },
           "logo_bg": {
             "label": "Logo background",
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "value": "rgba(255,255,255,.65)"
+            "value": "rgba(255,255,255,.65)",
+            "dependencies": {
+              "evaluate": "all",
+              "conditions": [{
+                "option": "site_title_type",
+                "equals": "text"
+              }]
+            }
           }
         }
       }
@@ -2073,42 +2128,48 @@
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "value": "rgba(255,255,255,1)"
+            "value": "rgba(255,255,255,1)",
+            "reload_preview": true
           },
           "btn_hover_bg": {
             "label": "Button hover background",
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "value": "rgba(255,255,255,1)"
+            "value": "rgba(255,255,255,1)",
+            "reload_preview": true
           },
           "btn_border_color": {
             "label": "Button border color",
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "value": "rgba(255,255,255,1)"
+            "value": "rgba(255,255,255,1)",
+            "reload_preview": true
           },
           "btn_border_hover_color": {
             "label": "Button border hover color",
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "value": "rgba(255,255,255,1)"
+            "value": "rgba(255,255,255,1)",
+            "reload_preview": true
           },
           "btn_color": {
             "label": "Button color",
             "type": "color",
             "with_alpha": true,
             "control_first": true,
-            "value": "rgba(0,0,0,1)"
+            "value": "rgba(0,0,0,1)",
+            "reload_preview": true
           },
           "btn_hover_color": {
             "label": "Button hover color",
             "type": "color",
             "control_first": true,
             "with_alpha": true,
-            "value": "rgba(0,0,0,1)"
+            "value": "rgba(0,0,0,1)",
+            "reload_preview": true
           }
         },
         "Dropdown": {
@@ -2271,6 +2332,25 @@
             "with_alpha": true,
             "control_first": true,
             "value": "rgba(255,255,255,1)"
+          },
+          "footer_link_color": {
+            "label": "Footer link color",
+            "type": "color",
+            "with_alpha": true,
+            "control_first": true,
+            "value": "rgba(0,0,0,1)"
+          },
+          "footer_essay_list_nth": {
+            "label": "Footer list every second background",
+            "type": "color",
+            "control_first": true,
+            "value": "rgb(238,238,238)"
+          },
+          "footer_essay_list_nth_color": {
+            "label": "Footer list every second text color",
+            "type": "color",
+            "control_first": true,
+            "value": "rgb(255,255,255)"
           }
         },
         "Scrollbar": {

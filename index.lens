@@ -45,7 +45,7 @@
   <koken:if true="settings.front_fav">
     <!-- Favorites Section -->
       <koken:include file="inc/index/fav.html" />
-    <!-- Content Section -->
+    <!-- Favorites Section -->
   </koken:if>
 
 </div>

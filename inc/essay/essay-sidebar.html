@@ -1,53 +1,61 @@
+<koken:featured_image>
+  <span class="text-uppercase">Featured image</span><br>
+  <koken:link>
+    <koken:img class="essay-photo-sidebar img-rounded m-b-2" lazy="true" />
+  </koken:link>
+</koken:featured_image>
+
 <ul>
-<koken:if true="settings.show_date">
-  <li>
-    <i class="fa fa-clock-o"></i> <span class="text-uppercase">{{ language.added }}</span><br>
-    <p>
-      <koken:time relative="{{ settings.date_relative }}" />
-    </p>
-  </li>
-</koken:if>
+  <koken:if true="settings.show_date">
+    <li>
+      <i class="fa fa-clock-o"></i> <span class="text-uppercase">{{ language.added }}</span><br>
+      <p>
+        <koken:time relative="{{ settings.date_relative }}" /> (
+        <koken:time />)
+      </p>
+    </li>
+  </koken:if>
 
-<koken:if true="settings.show_share_buttons">
-  <li>
-    <i class="fa fa-share"></i> <span class="text-uppercase">{{ language.share }}</span><br>
-    <p>
-      <koken:link class="btn btn-sm" share="twitter">Twitter <i class="fa fa-twitter"></i></koken:link>
-      <koken:link class="btn btn-sm" share="facebook">Facebook <i class="fa fa-facebook"></i></koken:link>
-      <koken:link class="btn btn-sm" share="pinterest">Pinterest <i class="fa fa-pinterest"></i></koken:link>
-      <koken:link class="btn btn-sm" share="tumblr">Tumblr <i class="fa fa-tumblr"></i></koken:link>
-      <koken:link class="btn btn-sm" share="google-plus">Google plus <i class="fa fa-google-plus"></i></koken:link>
-    </p>
-  </li>
-</koken:if>
+  <koken:if true="settings.show_share_buttons">
+    <li>
+      <i class="fa fa-share"></i> <span class="text-uppercase">{{ language.share }}</span><br>
+      <p>
+        <koken:link class="btn btn-sm" share="twitter">Twitter <i class="fa fa-twitter"></i></koken:link>
+        <koken:link class="btn btn-sm" share="facebook">Facebook <i class="fa fa-facebook"></i></koken:link>
+        <koken:link class="btn btn-sm" share="pinterest">Pinterest <i class="fa fa-pinterest"></i></koken:link>
+        <koken:link class="btn btn-sm" share="tumblr">Tumblr <i class="fa fa-tumblr"></i></koken:link>
+        <koken:link class="btn btn-sm" share="google-plus">Google plus <i class="fa fa-google-plus"></i></koken:link>
+      </p>
+    </li>
+  </koken:if>
 
-<koken:if true="settings.show_tags">
-  <li>
-    <koken:load filter:tag="{{ tag.id }}">
-      <koken:tags>
-      <i class="fa fa-tags"></i> <span class="text-uppercase">{{ language.tags }}</span><br>
-        <p>
-          <koken:loop>
-            <koken:link class="btn btn-sm"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
-          </koken:loop>
-        </p>
-      </koken:tags>
-    </koken:load>
-  </li>
-</koken:if>
+  <koken:if true="settings.show_tags">
+    <li>
+      <koken:load filter:tag="{{ tag.id }}">
+        <koken:tags>
+          <i class="fa fa-tags"></i> <span class="text-uppercase">{{ language.tags }}</span><br>
+          <p>
+            <koken:loop>
+              <koken:link class="btn btn-sm"><i class="fa fa-tag"></i> {{ tag.title }}</koken:link>
+            </koken:loop>
+          </p>
+        </koken:tags>
+      </koken:load>
+    </li>
+  </koken:if>
 
-<koken:if true="settings.show_categories">
-  <li>
-    <koken:load filter:category="{{ category.id }}">
-      <koken:categories>
-      <i class="fa fa-bookmark"></i> <span class="text-uppercase">{{ language.categories }}</span><br>
-        <p>
-          <koken:loop>
-            <koken:link class="btn btn-sm"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
-          </koken:loop>
-        </p>
-      </koken:categories>
-    </koken:load>
-  </li>
-</koken:if>
+  <koken:if true="settings.show_categories">
+    <li>
+      <koken:load filter:category="{{ category.id }}">
+        <koken:categories>
+          <i class="fa fa-bookmark"></i> <span class="text-uppercase">{{ language.categories }}</span><br>
+          <p>
+            <koken:loop>
+              <koken:link class="btn btn-sm"><i class="fa fa-bookmark"></i> {{ category.title }}</koken:link>
+            </koken:loop>
+          </p>
+        </koken:categories>
+      </koken:load>
+    </li>
+  </koken:if>
 </ul>
