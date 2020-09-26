@@ -16,4 +16,4 @@ Click the "Use theme" button to enable this theme<br>
 If this is an updated version with new features in admin, make sure to go to /admin/#/settings/system/ and click the "clear system cache" button<br>
 <i>This theme is open-sourced software licensed under the MIT license.</i><br><br>
 <h1>Demo:</h1>
-<a href="https://grimur.net/portfolio/">grimur.net/portfolio/</a>
+<a href="https://portfolio.grimur.net/">Portfolio.grimur.net</a>
